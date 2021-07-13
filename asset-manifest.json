@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Proyecto_Vacunacion/static/css/main.87497560.chunk.css",
+    "main.js": "/Proyecto_Vacunacion/static/js/main.fe6edc75.chunk.js",
+    "main.js.map": "/Proyecto_Vacunacion/static/js/main.fe6edc75.chunk.js.map",
+    "runtime-main.js": "/Proyecto_Vacunacion/static/js/runtime-main.223995aa.js",
+    "runtime-main.js.map": "/Proyecto_Vacunacion/static/js/runtime-main.223995aa.js.map",
+    "static/js/2.1a8eec4f.chunk.js": "/Proyecto_Vacunacion/static/js/2.1a8eec4f.chunk.js",
+    "static/js/2.1a8eec4f.chunk.js.map": "/Proyecto_Vacunacion/static/js/2.1a8eec4f.chunk.js.map",
+    "index.html": "/Proyecto_Vacunacion/index.html",
+    "static/css/main.87497560.chunk.css.map": "/Proyecto_Vacunacion/static/css/main.87497560.chunk.css.map",
+    "static/js/2.1a8eec4f.chunk.js.LICENSE.txt": "/Proyecto_Vacunacion/static/js/2.1a8eec4f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.223995aa.js",
+    "static/js/2.1a8eec4f.chunk.js",
+    "static/css/main.87497560.chunk.css",
+    "static/js/main.fe6edc75.chunk.js"
+  ]
+}
