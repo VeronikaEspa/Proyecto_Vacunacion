@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { db } from '../firebase';
 import '../utils/css/LinkForm.css'
 
  const LinkForm = (props) => {
@@ -12,16 +13,28 @@ import '../utils/css/LinkForm.css'
         dosis: '',
         laboratorio: ''
      };
-     const [values, setValues] = useState(initialStateValues);
+    const [values, setValues] = useState(initialStateValues);
     const handleSubmit = e =>{
-        e.preventDefault();
-        props.addOrEditLink(values);
-        setValues({...initialStateValues})
+    e.preventDefault();
+    props.addOrEditLink(values);
+    setValues({...initialStateValues})
     };
     const handleInputChange = e =>{
-        const {name, value} = e.target;
-        setValues({...values, [name]: value})
+    const {name, value} = e.target;
+    setValues({...values, [name]: value})
     };
+    const getLinkById = async (id) => {
+         const doc = await db.collection('links').doc(id).get();
+         setValues({...doc.data()})
+    }
+    useEffect(() => {
+         if(props.currentId === ''){
+              setValues({...initialStateValues});
+         }
+         else{
+              getLinkById(props.currentId)
+         }
+    }, [props.currentId]);
     return(
         <form className="cardFormulario" onSubmit={handleSubmit}>
             <input
@@ -72,8 +85,24 @@ import '../utils/css/LinkForm.css'
                 onChange={handleInputChange}
                 value={values.sintomas}
            />
+           <input
+                type="text"
+                className=""
+                placeholder="Ingresar dosis"
+                name="dosis"
+                onChange={handleInputChange}
+                value={values.dosis}
+           />
+           <input
+                type="text"
+                className=""
+                placeholder="Ingresar laboratorio"
+                name="laboratorio"
+                onChange={handleInputChange}
+                value={values.laboratorio}
+           />
             <button className="">
-                Enviar
+               {props.currentId === '' ? 'Guardar':'Editar'}
             </button>
         </form>
     )

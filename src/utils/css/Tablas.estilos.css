@@ -1,0 +1,35 @@
+.tablaResultados{
+    width: 100%;
+    border: 1px solid #000;
+    font-size: 15px;
+}
+.acomodaTabla{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chikito{
+    font-size: 13px;
+    width: 14%;
+}
+.chikito2{
+    width: 14%;
+}
+.pequeño{
+    width: 8%;
+}
+ th, td {
+    text-align: center;
+    vertical-align: top;
+    border: 0px solid #000;
+    width: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+ }
+ .botonEliminar{
+     background-color: red;
+ }
+ .botonEditar{
+     background-color: yellow;
+ }
