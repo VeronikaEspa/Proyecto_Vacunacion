@@ -37,6 +37,11 @@ import '../utils/css/LinkForm.css'
     }, [props.currentId]);
     return(
         <form className="cardFormulario" onSubmit={handleSubmit}>
+            <select name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
+               <option value="C.C" selected>Cedula de ciudadania</option>
+               <option value="T.I">Tarjeta de identidad</option>
+               <option value="extranjeria">Cedula de extranjeria</option>
+            </select>
             <input
                 type="text"
                 className=""
@@ -85,14 +90,12 @@ import '../utils/css/LinkForm.css'
                 onChange={handleInputChange}
                 value={values.sintomas}
            />
-           <input
-                type="text"
-                className=""
-                placeholder="Ingresar dosis"
-                name="dosis"
-                onChange={handleInputChange}
-                value={values.dosis}
-           />
+           <select name="dosis" value={values.dosis} onChange={handleInputChange}>
+               <option value="Ninguna">Ninguna</option>
+               <option value="Primera">Primera</option>
+               <option value="Segunda">Segunda</option>
+               <option value="Unica">Unica</option>
+            </select>
            <input
                 type="text"
                 className=""

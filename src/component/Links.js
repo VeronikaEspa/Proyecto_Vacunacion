@@ -56,28 +56,26 @@ const Links = () => {
         <table className="tablaResultados">
                 <thead>
                     <tr>
-                        <th className="chikito2">#</th>
+                        <th className="chikito2">Tipo</th>
                         <th>Documento</th>
                         <th>Nombre completo</th>
-                        <th>Telefono</th>
                         <th className="chikito2">Correo</th>
+                        <th>Telefono</th>
                         <th>Dirección</th>
                         <th>Sintomatología</th>
                         <th className="pequeño">Dosis</th>
                         <th className="pequeño">Laboratorio</th>
                         <th>Opciones</th>
                     </tr>
-                </thead>
-            </table>
+                    </thead>
+                    <tbody id="tabla">
         {links.map(link => (
-            <table className="tablaResultados">
-                <tbody id="tabla">
                     <tr>
-                        <td className="chikito">{link.id}</td>
+                        <td>{link.tipoDocumentos}</td>
                         <td>{link.documento}</td>
                         <td>{link.nombre}</td>
-                        <td>{link.telefono}</td>
                         <td className="chikito">{link.correo}</td>
+                        <td>{link.telefono}</td>
                         <td>{link.direccion}</td>
                         <td>{link.sintomas}</td>
                         <td className="pequeño">{link.dosis}</td>
@@ -88,9 +86,9 @@ const Links = () => {
                             <button className="botonEliminar" onClick={() => onDeleteLink(link.id)}>X</button>
                         </td>
                     </tr>
-                </tbody>
-            </table>
             ))}
+            </tbody>
+            </table>
         </div>
     </div>
     )
