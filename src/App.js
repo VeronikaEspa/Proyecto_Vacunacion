@@ -1,14 +1,12 @@
 import GlobalStyles from './globalStyles';
-// import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css';
+//import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+//import './App.css';
 import Home from './pages/Home/Home'
-import Index from './pages/Home/Index'
 
 function App() {
   return (
     <div className="App">
-      {/*<Home/>*/}
-      <Index/>
+      <Home/>
       <GlobalStyles/>
       {/* <Router>
       <GlobalStyles/>
