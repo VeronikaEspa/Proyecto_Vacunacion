@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import LinkForm from './LinkForm'
-import {db} from '../firebase'
-import '../utils/css/Tablas.estilos.css'
+import {db} from '../../firebase'
+import './Tablas.estilos.css'
 import {toast} from 'react-toastify'
 
-const Links = () => {
+const Links = ({handleLogout}) => {
 
     const [links, setLinks] = useState([]);
     const[currentId, setCurrentId] = useState("");
@@ -49,6 +49,7 @@ const Links = () => {
     }, []);
     return(
     <div>
+        <button onClick={handleLogout}>Cerrar sesión</button>
         <div>
             <LinkForm {...{addOrEditLink, currentId, links}}/>
         </div>

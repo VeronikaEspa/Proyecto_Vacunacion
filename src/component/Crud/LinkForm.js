@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { db } from '../firebase';
-import '../utils/css/LinkForm.css'
+import { db } from '../../firebase';
+import './LinkForm.css'
 
  const LinkForm = (props) => {
      const initialStateValues ={
