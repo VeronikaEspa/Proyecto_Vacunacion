@@ -36,6 +36,8 @@ import './LinkForm.css'
          }
     }, [props.currentId]);
     return(
+         <div>
+         <button onClick={}>Agregar paciente</button>
         <form className="cardFormulario" onSubmit={handleSubmit}>
             <select name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
                <option value="C.C" selected>Cedula de ciudadania</option>
@@ -108,6 +110,7 @@ import './LinkForm.css'
                {props.currentId === '' ? 'Guardar':'Editar'}
             </button>
         </form>
+        </div>
     )
 };
 export default LinkForm;
