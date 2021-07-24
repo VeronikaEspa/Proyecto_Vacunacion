@@ -1,10 +1,16 @@
-import React from 'react'
-import {Todo} from '../../component/index'
-const Home = () => {
-    return(
+import React from 'react';
+import {Menu, Banner, InfoTapabocas, Slider, Footer } from '../../component';
+function Home() {
+    return (
+      <div className="Home">
         <>
-        <Todo />
+        <Menu/>
+        <Banner/>
+        <InfoTapabocas/>
+        <Slider/>
+        <Footer/>
         </>
-    )
-}
-export default Home;
+     </div>
+    );
+  };
+  export default Home;
