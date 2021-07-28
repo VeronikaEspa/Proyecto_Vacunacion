@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import 'firebase/auth';
 import firebase from 'firebase';
 import Login from "./Login";
-// import { Link } from "react-router-dom";
 import Links from "../Crud/Links";
 
  const ConfigLogin = () => {
@@ -37,17 +36,16 @@ import Links from "../Crud/Links";
         });
     };
     const handleSignup = () => {
-        firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, password)
-        .catch((err)=>{
-            switch(err.code){
-                case "auth/email-already-in-use":
-                case "auth/invalid-email":
-                    setEmailError(err.message);
-                    break
-            };
-        });
+        // firebase
+        // .auth()
+        // .createUserWithEmailAndPassword(email, password)
+        // .catch((err)=>{
+        //     switch(err.code){
+        //         case "auth/email-already-in-use":
+        //         case "auth/invalid-email":
+        //             setEmailError(err.message);
+        //             break
+        window.alert("Si no tiene una cuenta, contactarse con el encargado")
     };
     const handleLogout = () => {
         firebase.auth().signOut();

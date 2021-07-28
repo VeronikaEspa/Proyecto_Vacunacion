@@ -35,82 +35,129 @@ import './LinkForm.css'
               getLinkById(props.currentId)
          }
     }, [props.currentId]);
+{/* <div className="btnContainer">
+                    {hasAccount ?(
+                        <>
+                        <button onClick={handleSignup}>Crea una cuenta</button>
+                        <p>Si no tienes una cuenta, contacta con el encargado
+                            <span onClick={() => setHasAccount(!hasAccount)}>Iniciar sesión</span>
+                        </p>
+                    </>
+                    ) : (
+                        <>
+                            <button onClick={handleLogin}>Iniciar sesión</button>
+                            <p>No tienes una
+                                <span onClick={() => setHasAccount(!hasAccount)}>Cuenta?</span>
+                            </p>
+                        </>
+                    )} */}
     return(
-         <div>
-         <button onClick={}>Agregar paciente</button>
-        <form className="cardFormulario" onSubmit={handleSubmit}>
-            <select name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
-               <option value="C.C" selected>Cedula de ciudadania</option>
-               <option value="T.I">Tarjeta de identidad</option>
-               <option value="extranjeria">Cedula de extranjeria</option>
-            </select>
-            <input
-                type="text"
-                className=""
-                placeholder="Ingresar documento"
-                name="documento"
-                onChange={handleInputChange}
-                value={values.documento}
-           />
-           <input
-                type="text"
-                className=""
-                placeholder="Ingresar nombre completo"
-                name="nombre"
-                onChange={handleInputChange}
-                value={values.nombre}
-           />
-           <input
-                type="number"
-                className=""
-                placeholder="Ingresar telefono"
-                name="telefono"
-                onChange={handleInputChange}
-                value={values.telefono}
-           />
-           <input
-                type="mail"
-                className=""
-                placeholder="Ingresar correo"
-                name="correo"
-                onChange={handleInputChange}
-                value={values.correo}
-           />
-           <input
-                type="text"
-                className=""
-                placeholder="Ingresar direccion"
-                name="direccion"
-                onChange={handleInputChange}
-                value={values.direccion}
-           />
-           <input
-                type="text"
-                className=""
-                placeholder="Ingresar sintomas que tiene"
-                name="sintomas"
-                onChange={handleInputChange}
-                value={values.sintomas}
-           />
-           <select name="dosis" value={values.dosis} onChange={handleInputChange}>
-               <option value="Ninguna">Ninguna</option>
-               <option value="Primera">Primera</option>
-               <option value="Segunda">Segunda</option>
-               <option value="Unica">Unica</option>
-            </select>
-           <input
-                type="text"
-                className=""
-                placeholder="Ingresar laboratorio"
-                name="laboratorio"
-                onChange={handleInputChange}
-                value={values.laboratorio}
-           />
-            <button className="">
+         <div className="naranja formulario margenesExternos">
+         <form className="cardFormulario" onSubmit={handleSubmit}>
+               <div className="padreInput textoInputs">
+                    <label className="blancoLetra">Documento</label>
+                    <select className=" inputs selectorDocumento" name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
+                         <option value="C.C">Cedula de ciudadania</option>
+                         <option value="T.I">Tarjeta de identidad</option>
+                         <option value="extranjeria">Cedula de extranjeria</option>
+                    </select>
+                    <input
+                    type="text"
+                    className=" inputs inputTextoDocumento"
+                    placeholder="Ingresar numero documento"
+                    name="documento"
+                    required
+                    autocomplete="off"
+                    onChange={handleInputChange}
+                    value={values.documento}
+                    />
+               </div>
+               <div className=" padreInput textoInputs">
+                    <label className="blancoLetra">Dirección</label>
+                    <input
+                    type="text"
+                    className="inputTexto inputs"
+                    placeholder="Ingresar direccion"
+                    name="direccion"
+                    autocomplete="off"
+                    required
+                    onChange={handleInputChange}
+                    value={values.direccion}
+                    />
+               </div>
+               <div className="padreInput textoInputs">
+                    <label className="blancoLetra">Nombre completo</label>
+                    <input
+                    type="text"
+                    className="inputTexto inputs"
+                    placeholder="Ingresar nombre completo"
+                    name="nombre"
+                    autocomplete="off"
+                    required
+                    onChange={handleInputChange}
+                    value={values.nombre}
+                    />
+               </div>
+               <div className=" padreInput textoInputs">
+                    <label className="blancoLetra">Sintomatología</label>
+                    <input
+                    type="text"
+                    autocomplete="off"
+                    className="inputTexto inputs"
+                    placeholder="Ingresar sintomas que presenta"
+                    name="sintomas"
+                    onChange={handleInputChange}
+                    value={values.sintomas}
+                    />
+               </div>
+               <div className="padreInput textoInputs">
+                    <label className="blancoLetra">Correo electrónico</label>
+                    <input
+                    type="mail"
+                    className="inputTexto inputs"
+                    placeholder="Ingresar correo"
+                    name="correo"
+                    autocomplete="off"
+                    onChange={handleInputChange}
+                    value={values.correo}
+                    />
+               </div>
+               <div className=" padreInput textoInputs">
+                    <label className=" blancoLetra">Dosis</label>
+                    <select className="selector inputs" name="dosis" value={values.dosis} onChange={handleInputChange}>
+                         <option value="Ninguna">Ninguna</option>
+                         <option value="Primera">Primera</option>
+                         <option value="Segunda">Segunda</option>
+                         <option value="Unica">Única</option>
+                    </select>
+               </div>
+               <div className="padreInput textoInputs">
+                    <label className="blancoLetra">Telefono</label>
+                    <input
+                    type="number"
+                    className="inputTexto inputs"
+                    placeholder="Ingresar telefono"
+                    name="telefono"
+                    autocomplete="off"
+                    onChange={handleInputChange}
+                    value={values.telefono}
+                    />
+               </div>
+               <div className="padreInput textoInputs">
+                    <label className="blancoLetra">Laboratorio</label>
+                    <select className="selector inputs" name="laboratorio" value={values.laboratorio} onChange={handleInputChange}>
+                         <option value="Pfizer">Pfizer</option>
+                         <option value="Astrazeneca">Astrazeneca</option>
+                         <option value="Sinovac">Sinovac</option>
+                         <option value="J&J">Jonsons and Jonsons</option>
+                    </select>
+               </div>
+               <div></div>
+            <button className=" botonFormGuardar grisFondo blancoLetra padreInput">
                {props.currentId === '' ? 'Guardar':'Editar'}
             </button>
         </form>
         </div>
-    )
+    );
 };
 export default LinkForm;

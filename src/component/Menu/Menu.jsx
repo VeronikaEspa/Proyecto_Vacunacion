@@ -1,6 +1,7 @@
 import logo from '../../utils/img/Logo.png'
 import jeringa from '../../utils/img/Jeringa.png'
 import pulso from '../../utils/img/Pulso.png'
+import {Link} from "react-router-dom"
 function Menu() {
     return (
     <>
@@ -8,7 +9,9 @@ function Menu() {
           {/*Contenido del menu*/}
         <section className="ContainerMenu">
         <div>
-            <a href="../../App.js"><img src={logo} alt="cargando..." /></a>
+            {/* <Link to = "/"> */}
+                <img src={logo} alt="Logo empresarial" />
+            {/* </Link> */}
         </div>
         <div>
             <img src={jeringa} alt="cargando..."/>
@@ -20,12 +23,13 @@ function Menu() {
             <div>
                 <img src={pulso} alt="cargando..." />
             </div>
-            <a href=""><button>INICIAR SESIÓN</button></a>
+            {/* <Link to = "/Login"> */}
+                <button className="link" type="button">INICIAR SESIÓN</button>
+            {/* </Link> */}
         </div>
         </section>
      </section>
     </>
     );
   }
-  
   export default Menu;

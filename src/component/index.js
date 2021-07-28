@@ -3,3 +3,7 @@ export {default as Banner} from './Banner/Banner';
 export {default as InfoTapabocas} from './InfoTapabocas/InfoTapabocas';
 export {default as Slider} from './Slider/Slider';
 export {default as Footer} from './Footer/Footer';
+export {default as Login} from './Login/Login';
+export {default as ConfigLogin} from './Login/configLogin';
+export {default as LinkForm} from './Crud/LinkForm';
+export {default as Links} from './Crud/Links';

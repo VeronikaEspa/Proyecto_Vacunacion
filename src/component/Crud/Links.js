@@ -47,15 +47,27 @@ const Links = ({handleLogout}) => {
     useEffect( () => {
         getLinks();
     }, []);
+    // state = {
+    //     divcontainer : false,
+    // }
+    // const HandleChange = e => {
+    //     this.setState({divcontainer:!this.state.divcontainer});
+    //     };
+    // const x = this.state.divcontainer;
     return(
     <div>
         <button onClick={handleLogout}>Cerrar sesión</button>
-        <div>
-            <LinkForm {...{addOrEditLink, currentId, links}}/>
-        </div>
+        <LinkForm {...{addOrEditLink, currentId, links}}/>
+        {/* <div>
+            <button onClick={HandleChange}>{x? 'Hide':'Show'}</button>
+            {
+                x && (<LinkForm {...{addOrEditLink, currentId, links}}/>)
+            }
+         <br/>
+        </div> */}
         <div className="acomodaTabla">
         <table className="tablaResultados">
-                <thead>
+                <thead className=" naranja blancoLetra encabezadoTabla">
                     <tr>
                         <th className="chikito2">Tipo</th>
                         <th>Documento</th>

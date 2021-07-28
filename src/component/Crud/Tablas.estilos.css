@@ -1,6 +1,6 @@
 .tablaResultados{
-    width: 100%;
-    border: 1px solid #000;
+    width: 98%;
+    border: 1px solid #5B5B5B;
     font-size: 15px;
 }
 .acomodaTabla{
@@ -14,7 +14,7 @@
     width: 14%;
 }
 .chikito2{
-    width: 14%;
+    width: 5%;
 }
 .pequeño{
     width: 8%;
@@ -22,14 +22,23 @@
  th, td {
     text-align: center;
     vertical-align: top;
-    border: 0px solid #000;
+    border: 0px solid #5B5B5B;
     width: 10%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+ }
+ .encabezadoTabla{
+    padding-top: 20%;
  }
  .botonEliminar{
-     background-color: red;
+     background-color: #C92525;
  }
+ .botonEliminar:hover{
+    background-color: #F45656;
+}
  .botonEditar{
-     background-color: yellow;
+     background-color: #E8CE47;
+ }
+ .botonEditar:hover{
+     background-color: #FFE665;
  }
