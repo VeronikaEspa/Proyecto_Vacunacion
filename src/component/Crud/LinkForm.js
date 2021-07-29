@@ -59,7 +59,7 @@ import './LinkForm.css'
                     <select className=" inputs selectorDocumento" name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
                          <option value="C.C">Cedula de ciudadania</option>
                          <option value="T.I">Tarjeta de identidad</option>
-                         <option value="extranjeria">Cedula de extranjeria</option>
+                         <option value="C.E">Cedula de extranjeria</option>
                     </select>
                     <input
                     type="text"
@@ -146,10 +146,12 @@ import './LinkForm.css'
                <div className="padreInput textoInputs">
                     <label className="blancoLetra">Laboratorio</label>
                     <select className="selector inputs" name="laboratorio" value={values.laboratorio} onChange={handleInputChange}>
+                         <option value="N/A">No aplica</option>
                          <option value="Pfizer">Pfizer</option>
                          <option value="Astrazeneca">Astrazeneca</option>
                          <option value="Sinovac">Sinovac</option>
-                         <option value="J&J">Jonsons and Jonsons</option>
+                         <option value="J&J">Johnson & Johnson</option>
+                         <option value="Moderna">Moderna</option>
                     </select>
                </div>
                <div></div>
