@@ -29,6 +29,7 @@ function Menu() {
         </div>
         </section>
      </section>
+     <styles/>
     </>
     );
   }
