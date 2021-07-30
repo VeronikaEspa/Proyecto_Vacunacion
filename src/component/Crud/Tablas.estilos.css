@@ -1,35 +1,74 @@
+/* TABLA GENERAL */
 .tablaResultados{
-    width: 100%;
-    border: 1px solid #000;
+    margin-top: 2%;
+    width: 98%;
+    border: 1.5px solid #5B5B5B;
     font-size: 15px;
+    border-radius: 5px;
 }
-.acomodaTabla{
+.acomodaTabla{ /* ACOMODA LA TABLA */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.chikito{
+/* ARREGLA TODAS LAS FILAS Y COLUMNAS */
+.organizacionTextoTabla{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tamañoPequeño{
+    width: 6%;
+}
+.tamañoMediano{
+    width: 9%;
+}
+.tamañoGrande{
+    width: 15%;
+}
+th, td {
+    font-family: 'poppins-regular';
     font-size: 13px;
-    width: 14%;
-}
-.chikito2{
-    width: 14%;
-}
-.pequeño{
-    width: 8%;
-}
- th, td {
     text-align: center;
+    align-items: center;
     vertical-align: top;
-    border: 0px solid #000;
-    width: 10%;
-    padding-left: 1%;
-    padding-right: 1%;
+    border: 0px solid #5B5B5B;
+ }
+ .encabezadoTabla{ /* Encabezado de la tabla */
+    font-family: 'poppins-semibold';
+    font-size: 13px;
+    padding-top: 20%;
+ }
+/* Boton opciones: Editar y Eliminar */
+ .botonesOpciones{
+    display: flex;
+    width: 90%;
+    margin: 5%;
+    justify-content: space-between;
+    align-content: center;
  }
  .botonEliminar{
-     background-color: red;
+    margin: 2%;
+    font-family: 'poppins-semibold';
+    font-size: 20px;
+    width: 40%;
+    border: 1px solid #F45656;
+    border-radius: 5px;
+    color: #ECECEC;
+    background-color: #C92525;
  }
+ .botonEliminar:hover{
+    background-color: #F45656;
+}
  .botonEditar{
-     background-color: yellow;
+    width: 40%;
+    margin: 2%;
+    border: 1px solid #FFE665;
+    border-radius: 5px;
+    background-color: #E8CE47;
+ }
+ .botonEditar:hover{
+    background-color: #FFE665;
  }

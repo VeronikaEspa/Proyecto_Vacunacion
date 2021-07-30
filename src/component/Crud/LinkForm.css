@@ -1,3 +1,65 @@
+.formulario{
+    display: grid;
+    width: 98%;
+    border-radius: 10px;
+}
 .cardFormulario{
-    background-color: blueviolet;
+    font-family: 'poppins-semibold';
+    font-size: 15px;
+    margin-top: 2%;
+    margin-left: 1%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4%;
+    row-gap: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.padreInput{
+    display: flex;
+    align-items: center;
+}
+label{
+    display: inline-block;
+    width: 22%;
+    text-align: center;
+}
+.inputs{
+    font-family: 'poppins-regular';
+    font-size: 12px;
+    text-align: center;
+    text-align-last: center;
+    padding: 1%;
+    margin: 2%;
+    border: 1px solid #9F400C;
+    border-radius: 5px;
+}
+.inputTexto{
+    width: 68%;
+}
+.selector{
+    width: 70%;
+}
+.selectorDocumento{
+    width: 30%;
+}
+.inputTextoDocumento{
+    width: 34%;
+}
+.botonFormGuardar{
+    font-family: 'poppins-semibold';
+    font-size: 16px;
+    margin: 3%;
+    margin-left: 74%;
+    margin-right: 0;
+    cursor: pointer;
+    border: 1px solid #9F400C;
+    border-radius: 5px;
+    width: 20%;
+    padding: 2%;
+    justify-content: center;
+}
+.botonFormGuardar:hover, .botonFormGuardar:active{
+    background-color: #212529;
 }

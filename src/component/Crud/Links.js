@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import LinkForm from './LinkForm'
 import {db} from '../../firebase'
-import './Tablas.estilos.css'
+import './Tablas.estilos.css';
+import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
+import lapiz from '../../utils/img/lapiz-editar.svg'
 
 const Links = ({handleLogout}) => {
 
@@ -47,15 +49,49 @@ const Links = ({handleLogout}) => {
     useEffect( () => {
         getLinks();
     }, []);
+    // state = {
+    //     divcontainer : false,
+    // }
+    // const HandleChange = e => {
+    //     this.setState({divcontainer:!this.state.divcontainer});
+    //     };
+    // const x = this.state.divcontainer;
     return(
     <div>
-        <button onClick={handleLogout}>Cerrar sesión</button>
-        <div>
-            <LinkForm {...{addOrEditLink, currentId, links}}/>
+        <header className="menuCrud naranja">
+        <div className="UsuarioNombre blancoFondo">
+            <h3>Bienvenido, Juan Pablo Corredor</h3>
+        <button className="botonCerrarSesion naranja blancoLetra" onClick={handleLogout}>Cerrar sesión</button>
         </div>
+        </header>
+        <div className="encimaTabla">
+            <button className="poppinSemibold añadirUsuario naranja blancoLetra" onClick={<LinkForm {...{addOrEditLink, currentId, links}}/>}>Añadir nuevo usuario</button>
+            <div className="filtraryBuscarUsuario">
+                <input
+                        type="text"
+                        className="buscarUsuario poppinSemibold"
+                        placeholder="Buscar usuario"
+                        name="usuario"
+                        autocomplete="off"
+                        />
+                <select className="poppinSemibold filtrarUsuario naranja blancoLetra" name="filtro">
+                         <option selected>Filtrar</option>
+                         <option value="Documento">Documento</option>
+                         <option value="Nombre">Nombre</option>
+                         {/* <<https://youtu.be/yMKTRn_THeA  Ver ese video para hacer un checkbox en un select>> */}
+                </select>
+            </div>
+        </div>
+        {/* <div>
+            <button onClick={HandleChange}>{x? 'Hide':'Show'}</button>
+            {
+                x && (<LinkForm {...{addOrEditLink, currentId, links}}/>)
+            }
+         <br/>
+        </div> */}
         <div className="acomodaTabla">
         <table className="tablaResultados">
-                <thead>
+                <thead className=" naranja blancoLetra encabezadoTabla">
                     <tr>
                         <th className="chikito2">Tipo</th>
                         <th>Documento</th>
@@ -72,18 +108,19 @@ const Links = ({handleLogout}) => {
                     <tbody id="tabla">
         {links.map(link => (
                     <tr>
-                        <td>{link.tipoDocumentos}</td>
-                        <td>{link.documento}</td>
-                        <td>{link.nombre}</td>
-                        <td className="chikito">{link.correo}</td>
-                        <td>{link.telefono}</td>
-                        <td>{link.direccion}</td>
-                        <td>{link.sintomas}</td>
-                        <td className="pequeño">{link.dosis}</td>
-                        <td className="pequeño">{link.laboratorio}</td>
-                        <td>
+                        <td className="tamañoPequeño">{link.tipoDocumentos}</td>
+                        <td className="tamañoMediano">{link.documento}</td>
+                        <td className="tamañoGrande">{link.nombre}</td>
+                        <td className="tamañoGrande">{link.correo}</td>
+                        <td className="tamañoMediano">{link.telefono}</td>
+                        <td className="tamañoMediano">{link.direccion}</td>
+                        <td className="tamañoGrande">{link.sintomas}</td>
+                        <td className="tamañoPequeño">{link.dosis}</td>
+                        <td className="tamañoMediano">{link.laboratorio}</td>
+                        <td className="botonesOpciones tamañoMediano">
                             <button className="botonEditar" onClick={() => setCurrentId(link.id)}>
-                                Lapiz</button>
+                            <img src={lapiz} alt="Editar"/>
+                            </button>
                             <button className="botonEliminar" onClick={() => onDeleteLink(link.id)}>X</button>
                         </td>
                     </tr>

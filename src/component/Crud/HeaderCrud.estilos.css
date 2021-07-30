@@ -1,0 +1,72 @@
+html,body{
+    margin: 0;
+}
+.menuCrud{
+    padding: 2%;
+}
+.encimaTabla{
+    margin-top: 5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 180px;
+    align-items: center;
+    margin-left: 5.5%;
+}
+header{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.UsuarioNombre{
+    top: 1760px;
+    font-family: 'poppins-regular';
+    font-size: 12px;
+    border-radius: 50px;
+    display: flex;
+    position: absolute;
+    width: 20%;
+    padding: 1%;
+    border: 2px solid #9F400C;
+    justify-content: center;
+    flex-direction: column;
+}
+.UsuarioNombre:active{
+    display: flex;
+}
+.botonCerrarSesion{
+    display: none;
+    padding: 2%;
+    width: 40%;
+}
+.poppinSemibold{
+    font-family: 'poppins-semibold';
+}
+.añadirUsuario{
+    font-size: 14px;
+    padding: 2%;
+    width: 35%;
+    border-radius: 5px;
+    border: 1px solid #9F400C;
+}
+.añadirUsuario:hover, .añadirUsuario:active{
+    background-color: #943907;
+}
+.filtraryBuscarUsuario{
+    display: flex;
+}
+.buscarUsuario{
+    font-size: 14px;
+    margin: 2%;
+    padding: 2%;
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid #9F400C;
+}
+.filtrarUsuario{
+    font-size: 14px;
+    margin: 2%;
+    padding: 2%;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #9F400C;
+}
