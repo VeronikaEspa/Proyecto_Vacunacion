@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 function Menu() {
     return (
     <>
-      <section className="Container">
+      <section className="Container ">
           {/*Contenido del menu*/}
         <section className="ContainerMenu">
         <div>
