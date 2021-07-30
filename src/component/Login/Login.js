@@ -17,7 +17,7 @@ const Login = (props) => {
     return(
         <section className="login">
             <div className="loginContainer">
-                <label>Username</label>
+                <label>Usuario: </label>
                 <input
                 type="text"
                 autoFocus required
@@ -26,7 +26,7 @@ const Login = (props) => {
                 setEmail(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
-                <label>Password</label>
+                <label>Contraseña: </label>
                 <input
                 type="password"
                 required
@@ -46,8 +46,8 @@ const Login = (props) => {
                     ) : (
                         <>
                             <button onClick={handleLogin}>Iniciar sesión</button>
-                            <p>No tienes una 
-                                <span onClick={() => setHasAccount(!hasAccount)}>Cuenta?</span>
+                            <p>No tienes una
+                                <span onClick={() => setHasAccount(!hasAccount)}> Cuenta?</span>
                             </p>
                         </>
                     )}

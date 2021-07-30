@@ -70,3 +70,6 @@ header{
     border-radius: 5px;
     border: 1px solid #9F400C;
 }
+.FormularioInscrip{
+    display: none;
+}

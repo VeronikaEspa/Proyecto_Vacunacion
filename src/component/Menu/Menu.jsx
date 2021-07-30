@@ -9,9 +9,9 @@ function Menu() {
           {/*Contenido del menu*/}
         <section className="ContainerMenu">
         <div>
-            {/* <Link to = "/"> */}
+            <Link to="/">
                 <img src={logo} alt="Logo empresarial" />
-            {/* </Link> */}
+            </Link>
         </div>
         <div>
             <img src={jeringa} alt="cargando..."/>
@@ -23,9 +23,9 @@ function Menu() {
             <div>
                 <img src={pulso} alt="cargando..." />
             </div>
-            {/* <Link to = "/Login"> */}
+            <Link to="/Login">
                 <button className="link" type="button">INICIAR SESIÓN</button>
-            {/* </Link> */}
+            </Link>
         </div>
         </section>
      </section>

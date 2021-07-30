@@ -1,12 +1,13 @@
 import React from 'react';
-import {ConfigLogin} from '../../component';
-function Login2() {
+import {ConfigLogin, Menu} from '../../component';
+function Login() {
     return (
       <div className="Login">
         <>
+        <Menu/>
         <ConfigLogin/>
         </>
      </div>
     );
   };
-  export default Login2;
+  export default Login;
