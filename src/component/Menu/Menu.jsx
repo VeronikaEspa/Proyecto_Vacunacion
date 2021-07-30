@@ -1,11 +1,7 @@
 import logo from '../../utils/img/Logo.png'
 import jeringa from '../../utils/img/Jeringa.png'
 import pulso from '../../utils/img/Pulso.png'
-<<<<<<< HEAD
-import styles from './Menu.styles.css'
-=======
 import {Link} from "react-router-dom"
->>>>>>> Origin/Todos
 function Menu() {
     return (
     <>
