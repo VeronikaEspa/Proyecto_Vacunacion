@@ -1,6 +1,7 @@
 import logo from '../../utils/img/Logo.png'
 import jeringa from '../../utils/img/Jeringa.png'
 import pulso from '../../utils/img/Pulso.png'
+import styles from './Menu.styles.css'
 function Menu() {
     return (
     <>
@@ -24,6 +25,7 @@ function Menu() {
         </div>
         </section>
      </section>
+     <styles/>
     </>
     );
   }
