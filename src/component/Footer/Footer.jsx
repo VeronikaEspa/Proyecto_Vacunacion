@@ -1,7 +1,7 @@
 
 function Footer() {
     return (
-      <div className="footer">
+      <div className="footer naranja">
           <footer>© 2021 FORJA EMPRESAS DESARROLLO POR...</footer>
      </div>
     );

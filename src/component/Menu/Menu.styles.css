@@ -1,3 +1,44 @@
-.ContainerMenu{
-    background-color: "pink";
+.Container {
+    padding: 3%;
+}
+
+.ContainerMenu {
+    display: flex;
+    justify-content: space-between;
 } 
+
+/*Botones*/
+button {
+    width: 30%;
+    height: 100%;
+    border-radius: 40px;
+    margin: 0.5%;
+    border: none;
+    margin: 8px;
+}
+.pulso {
+    position: relative;
+    z-index: 1;
+}
+.Menu {
+    height: 5%;
+    z-index: 2;
+    width: 40%;
+    margin-left: 25%;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.Login{
+    width: 100%;
+    height: 50%;
+}
+
+
+
+
+
+
+
+
