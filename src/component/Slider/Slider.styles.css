@@ -1,0 +1,28 @@
+.ContainerSlider {
+    font-family: "poppins-regular";    
+
+}
+.ContainerTarjetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tarjeta {
+    display: flex;
+    justify-content:space-around;
+    width: 300px;
+    height: 300px;
+    margin: 3%;
+}
+.tarjeta img{
+    width: 70px;
+    height: 70px;
+}
+.vacunadaa {
+    display: flex;
+    font-family: "poppins-bold";
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}

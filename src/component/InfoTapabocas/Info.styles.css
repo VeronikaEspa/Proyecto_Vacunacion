@@ -1,0 +1,24 @@
+.ContainerTapabocas {
+    display: flex;
+    font-family: "poppins-semibold";
+}
+ .tapabocas img{
+    box-shadow: 10px 10px 5px #CF703B;
+}
+.tapabocas {
+    position: absolute;
+    z-index: 2;
+}
+.informacion {
+    position: absolute;
+    z-index: 2;
+    margin-left: 40%;
+    margin-top: 4%;
+}
+
+.rayas {
+    position: relative;
+    z-index: 1;
+    margin-left: 74%;
+    margin-top: 2%;
+}
