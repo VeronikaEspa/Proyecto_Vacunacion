@@ -1,0 +1,25 @@
+.ContainerBanner {
+    font-family: "poppins-regular";
+}
+.infoBanner {
+    display: flex;
+    justify-content: center;
+}
+.parrafo {
+    line-height: 5px;
+    margin-top: 5%;
+    font-family: "poppins-semibold";
+}
+
+.imagenBanner img{
+    margin: 2%;
+    width: 1000px;
+    height: 220px;
+}
+
+.cov {
+    font-size: 40px;
+}
+.consulta {
+    margin-left: 50%;
+}

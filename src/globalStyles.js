@@ -11,10 +11,10 @@ html{ //Para que el scroll no sea de golpe
 //Estilos del scroll
 body::-webkit-scrollbar{
     width:15px;
-    background-color: #8C1102;
+    background-color: #FFFFFF;
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #FEAE4F;
+    background-color: #212529;
     border-radius: 30px;
 }
 // COLORES

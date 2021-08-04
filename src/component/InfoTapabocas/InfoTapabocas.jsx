@@ -1,14 +1,14 @@
 import tapabocas from '../../utils/img/Tapabocas.png'
 import rayas from '../../utils/img/Lineas.png'
-
+import './Info.styles.css'
 function InfoTapabocas() {
     return (
       <>
       <section className="ContainerTapabocas">
-          <div>
+          <div className="tapabocas">
             <img src={tapabocas} alt="cargando..."/>
           </div>
-          <div>
+          <div className="informacion">
             <p>¿Cómo debe usar Tapabocas?</p>
             <ul>
               <li>Lava tus manos, ten en cuenta que el tapabocas debe cubrir la nariz y boca</li>
@@ -17,10 +17,9 @@ function InfoTapabocas() {
               <li>Deberás cambiarlo, si se humedece con secreciones.</li>
             </ul>
           </div>
-          <div>
+          <div className="rayas">
             <img src={rayas} alt="cargando"/>
           </div>
-          <p>VACUNATE</p>
      </section>
      </>
     );
