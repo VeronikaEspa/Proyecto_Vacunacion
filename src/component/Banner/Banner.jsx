@@ -8,12 +8,12 @@ function Banner() {
           <div>
             <p>Dosis de esperanza</p>
             <p>Contra</p>
-            <p>Coviv19</p>
+            <p>Covid19</p>
           </div>
           <img src={principal} alt="cargando..."/>
         </div>
         <div>
-          <p>Consulta tu priorización en "Mi vacuna" y asiste al centro ComerciL</p>
+          <p>Consulta tu priorización en "Mi vacuna" y asiste al centro Comercial</p>
         </div>
      </section>
      </>
