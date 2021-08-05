@@ -40,7 +40,7 @@ const Links = ({handleLogout}) => {
             const docs = [];
             querySnapshot.forEach((doc) => {
                 docs.push({...doc.data(), id:doc.id});
-                console.log(docs)
+                // console.log(docs)
         });
         setLinks(docs);
     });
@@ -49,15 +49,6 @@ const Links = ({handleLogout}) => {
     useEffect( () => {
         getLinks();
     }, []);
-    // state = {
-    //     divcontainer : false,
-    // }
-    // const HandleChange = e => {
-    //     this.setState({divcontainer:!this.state.divcontainer});
-    //     };
-    // const x = this.state.divcontainer;
-
-
 
     function cerrarSesion(boton){
         boton = document.getElementById("botonCerrarSesion");
@@ -71,7 +62,7 @@ const Links = ({handleLogout}) => {
     <div>
         <header className="menuCrud naranja">
         <button onClick={cerrarSesion} className="UsuarioNombre blancoFondo">
-            <h3>Bienvenido, Juan Pablo Corredor</h3>
+            <h3>Bienvenidos, Juan Pablo</h3>
         <button className="botonCerrarSesion naranja blancoLetra" id="botonCerrarSesion" onClick={handleLogout}>Cerrar sesión</button>
         </button>
         </header>
@@ -113,22 +104,22 @@ const Links = ({handleLogout}) => {
                     </tr>
                     </thead>
                     <tbody id="tabla">
-        {links.map(link => (
+        {links.map(docu => (
                     <tr>
-                        <td className="tamañoPequeño">{link.tipoDocumentos}</td>
-                        <td className="tamañoMediano">{link.documento}</td>
-                        <td className="tamañoGrande">{link.nombre}</td>
-                        <td className="tamañoGrande">{link.correo}</td>
-                        <td className="tamañoMediano">{link.telefono}</td>
-                        <td className="tamañoMediano">{link.direccion}</td>
-                        <td className="tamañoGrande">{link.sintomas}</td>
-                        <td className="tamañoPequeño">{link.dosis}</td>
-                        <td className="tamañoMediano">{link.laboratorio}</td>
+                        <td className="tamañoPequeño">{docu.tipoDocumentos}</td>
+                        <td className="tamañoMediano">{docu.documento}</td>
+                        <td className="tamañoGrande">{docu.nombre}</td>
+                        <td className="tamañoGrande">{docu.correo}</td>
+                        <td className="tamañoMediano">{docu.telefono}</td>
+                        <td className="tamañoMediano">{docu.direccion}</td>
+                        <td className="tamañoGrande">{docu.sintomas}</td>
+                        <td className="tamañoPequeño">{docu.dosis}</td>
+                        <td className="tamañoMediano">{docu.laboratorio}</td>
                         <td className="botonesOpciones tamañoMediano">
-                            <button className="botonEditar" onClick={() => setCurrentId(link.id)}>
+                            <button className="botonEditar" onClick={() => setCurrentId(docu.id)}>
                             <img src={lapiz} alt="Editar"/>
                             </button>
-                            <button className="botonEliminar" onClick={() => onDeleteLink(link.id)}>X</button>
+                            <button className="botonEliminar" onClick={() => onDeleteLink(docu.id)}>X</button>
                         </td>
                     </tr>
             ))}

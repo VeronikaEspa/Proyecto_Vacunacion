@@ -18,15 +18,15 @@ function Menu() {
             <img src={jeringa} alt="cargando..."/>
         </div> */}
         <div className="Menu ">
-            <a href="./InfoTapabocas.jsx"><button className="naranja blancoLetra">VACUNATE</button></a>
-            <a href="./Slider.jsx"><button className="naranja blancoLetra">BENEFICIOS</button></a>
-            <a href="./InfoTapabocas.jsx"><button className="naranja blancoLetra">CUIDADOS</button></a>
-        </div>    
+            <a href="./InfoTapabocas.jsx"><button className="botonMenu naranja blancoLetra">VACUNATE</button></a>
+            <a href="./Slider.jsx"><button className="botonMenu naranja blancoLetra">BENEFICIOS</button></a>
+            <a href="./InfoTapabocas.jsx"><button className="botonMenu naranja blancoLetra">CUIDADOS</button></a>
+        </div>
         <div className="pulso">
             <img src={pulso} alt="cargando..." />
         </div>
         <Link to="/Login">
-            <button className="link negroFondo Login" type="button">INICIAR SESIÓN</button>
+            <button className="botonMenu link grisFondo botonLogin blancoLetra" type="button">INICIAR SESIÓN</button>
         </Link>
         </section>
      </section>
