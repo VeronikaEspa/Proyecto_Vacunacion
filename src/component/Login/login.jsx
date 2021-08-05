@@ -1,5 +1,5 @@
 import enfermera from '../../utils/img/enfermera.PNG'
-
+import './login.styles.css'
 function login() {
     return (
     <div class="container">
