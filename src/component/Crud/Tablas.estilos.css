@@ -65,6 +65,9 @@ th, td {
  .botonEditar{
     width: 40%;
     margin: 2%;
+    padding: 5%;
+    padding-left: 0;
+    padding-right: 0;
     border: 1px solid #FFE665;
     border-radius: 5px;
     background-color: #E8CE47;

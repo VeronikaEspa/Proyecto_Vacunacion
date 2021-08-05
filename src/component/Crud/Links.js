@@ -6,7 +6,8 @@ import './Tablas.estilos.css';
 import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
-import {handleLogout} from '../Login/configLogin'
+import personaje from '../../utils/img/logoCrud.png'
+import lupa from '../../utils/img/lupaBuscar.svg'
 const Links = () => {
 
     const [links, setLinks] = useState([]);
@@ -57,9 +58,6 @@ const Links = () => {
     //     this.setState({divcontainer:!this.state.divcontainer});
     //     };
     // const x = this.state.divcontainer;
-
-
-
     function cerrarSesion(boton){
         boton = document.getElementById("botonCerrarSesion");
         boton.classList.toggle("botonCerrarSesion");
@@ -76,8 +74,11 @@ const Links = () => {
     <div>
         <header className="menuCrud naranja">
         <button onClick={cerrarSesion} className="UsuarioNombre blancoFondo">
-            <h3>Bienvenido, Juan Pablo Corredor</h3>
-        <button className="botonCerrarSesion naranja blancoLetra" id="botonCerrarSesion" onClick={salir}>Cerrar sesión</button>
+            <div className="botonBienvenidos">
+                <h3>Bienvenidos</h3>
+                <img src={personaje} className="imagenUsuario" alt="imagenPersonal"/>
+            </div>
+                <button className="botonCerrarSesion naranja blancoLetra" id="botonCerrarSesion" onClick={salir}>Cerrar sesión</button>
         </button>
         </header>
         <div className="encimaTabla">
@@ -85,18 +86,17 @@ const Links = () => {
             <div className="filtraryBuscarUsuario">
                 <input
                         type="text"
-                        className="buscarUsuario poppinSemibold"
+                        className="poppinSemibold buscandoteQueridoUsuario"
                         placeholder="Buscar usuario"
                         name="usuario"
                         autocomplete="off"
-                        />
+                />
                 <select className="poppinSemibold filtrarUsuario naranja blancoLetra" name="filtro">
                          <option selected>Filtrar</option>
                          <option value="Documento">Documento</option>
                          <option value="Nombre">Nombre</option>
-                         {/* <<https://youtu.be/yMKTRn_THeA  Ver ese video para hacer un checkbox en un select>> */}
                 </select>
-            </div>
+    </div>
         </div>
         <div className="FormularioInscrip" id="formulario">
         <LinkForm {...{addOrEditLink, currentId, links}}/>
