@@ -1,9 +1,10 @@
 import React from 'react';
-import {ConfigLogin} from '../../component';
+import {ConfigLogin, Menu} from '../../component';
 function Login() {
     return (
       <div className="Login">
         <>
+        <Menu/>
         <ConfigLogin/>
         </>
      </div>
