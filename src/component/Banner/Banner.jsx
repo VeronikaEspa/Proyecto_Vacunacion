@@ -11,7 +11,7 @@ function Banner() {
             <p className="cov grisLetra" >Contra</p>
             <p className="cov blancoLetra">Covid19</p>
           </div>
-        <div className="imagenBanner">  
+        <div className="imagenBanner">
           <img src={principal} alt="cargando..."/>
         </div>
         </section>
@@ -22,8 +22,4 @@ function Banner() {
      </>
     );
   }
-
-
-
-
   export default Banner;

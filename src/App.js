@@ -4,7 +4,8 @@ import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home/Home';
-import Login from './pages/Contacto/Login';
+import Login from './pages/Login/Login';
+import Tabla from './component/Crud/Links'
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/Login" exact component={Login}/>
+          <Route path="/Tabla" exact component={Tabla}/>
         </Switch>
       </Router>
    </div>

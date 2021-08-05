@@ -2,8 +2,10 @@ import React, {useEffect, useState} from "react";
 import 'firebase/auth';
 import firebase from 'firebase';
 import Login from "./Login";
-import Links from "../Crud/Links";
 
+export const handleLogout = () => {
+    firebase.auth().signOut();
+};
  const ConfigLogin = () => {
     const [ user, setUser] = useState("");
     const [ email, setEmail ] = useState('');
@@ -25,6 +27,9 @@ import Links from "../Crud/Links";
         firebase
         .auth()
         .signInWithEmailAndPassword(email, password)
+        .then((res)=>{
+            window.location.replace("/Tabla")
+        })
         .catch((err)=>{
             switch(err.code){
                 case "auth/invalid-email":
@@ -47,9 +52,6 @@ import Links from "../Crud/Links";
         //             break
         window.alert("Si no tiene una cuenta, contactarse con el encargado")
     };
-    const handleLogout = () => {
-        firebase.auth().signOut();
-    };
     const authListener = () => {
         firebase.auth().onAuthStateChanged((user) => {
             if(user){
@@ -65,10 +67,7 @@ import Links from "../Crud/Links";
     }, []);
     return(
         <div>
-            {user ? (
-                <Links handleLogout={handleLogout}/>
-            ) : (
-                <Login
+            <Login
                 email={email}
                 setEmail={setEmail}
                 password={password}
@@ -79,8 +78,7 @@ import Links from "../Crud/Links";
                 setHasAccount={setHasAccount}
                 emailError={emailError}
                 passwordError={passwordError}
-        />
-            )}
+                />
         </div>
    )
 }

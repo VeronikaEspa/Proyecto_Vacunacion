@@ -35,28 +35,13 @@ import './LinkForm.css'
               getLinkById(props.currentId)
          }
     }, [props.currentId]);
-{/* <div className="btnContainer">
-                    {hasAccount ?(
-                        <>
-                        <button onClick={handleSignup}>Crea una cuenta</button>
-                        <p>Si no tienes una cuenta, contacta con el encargado
-                            <span onClick={() => setHasAccount(!hasAccount)}>Iniciar sesión</span>
-                        </p>
-                    </>
-                    ) : (
-                        <>
-                            <button onClick={handleLogin}>Iniciar sesión</button>
-                            <p>No tienes una
-                                <span onClick={() => setHasAccount(!hasAccount)}>Cuenta?</span>
-                            </p>
-                        </>
-                    )} */}
     return(
          <div className="naranja formulario margenesExternos">
          <form className="cardFormulario" onSubmit={handleSubmit}>
                <div className="padreInput textoInputs">
                     <label className="blancoLetra">Documento</label>
                     <select className=" inputs selectorDocumento" name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
+                         <option value="" selected>Ingresar tipo de documento</option>
                          <option value="C.C">Cedula de ciudadania</option>
                          <option value="T.I">Tarjeta de identidad</option>
                          <option value="C.E">Cedula de extranjeria</option>
@@ -125,6 +110,7 @@ import './LinkForm.css'
                <div className=" padreInput textoInputs">
                     <label className=" blancoLetra">Dosis</label>
                     <select className="selector inputs" name="dosis" value={values.dosis} onChange={handleInputChange}>
+                         <option value="" selected>Dosis</option>
                          <option value="Ninguna">Ninguna</option>
                          <option value="Primera">Primera</option>
                          <option value="Segunda">Segunda</option>
@@ -146,6 +132,7 @@ import './LinkForm.css'
                <div className="padreInput textoInputs">
                     <label className="blancoLetra">Laboratorio</label>
                     <select className="selector inputs" name="laboratorio" value={values.laboratorio} onChange={handleInputChange}>
+                         <option value="" selected>Laboratorio</option>
                          <option value="N/A">No aplica</option>
                          <option value="Pfizer">Pfizer</option>
                          <option value="Astrazeneca">Astrazeneca</option>
