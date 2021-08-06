@@ -1,6 +1,6 @@
 import GlobalStyles from './globalStyles';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home/Home';
@@ -13,10 +13,10 @@ function App() {
         <ToastContainer/>
         <GlobalStyles/>
         <Switch>
-          <Route path="/" component={Home}/>
           <Route path="/" exact component={Home}/>
           <Route path="/Login" exact component={Login}/>
           <Route path="/Tabla" exact component={Tabla}/>
+          <Route path="/" component={Home}/>
         </Switch>
       </Router>
    </div>
