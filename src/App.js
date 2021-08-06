@@ -13,6 +13,7 @@ function App() {
         <ToastContainer/>
         <GlobalStyles/>
         <Switch>
+          <Route path="/" component={Home}/>
           <Route path="/" exact component={Home}/>
           <Route path="/Login" exact component={Login}/>
           <Route path="/Tabla" exact component={Tabla}/>
