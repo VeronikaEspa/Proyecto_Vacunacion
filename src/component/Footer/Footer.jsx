@@ -1,8 +1,8 @@
-
+import './Footer.styles.css'
 function Footer() {
     return (
-      <div className="footer naranja">
-          <footer>© 2021 FORJA EMPRESAS DESARROLLO POR...</footer>
+      <div className="pieDePagina negroFondo">
+          <footer>© 2021 FORJA EMPRESAS</footer>
      </div>
     );
   }
