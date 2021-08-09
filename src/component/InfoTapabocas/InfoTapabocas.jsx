@@ -17,9 +17,13 @@ function InfoTapabocas() {
               <li>Deberás cambiarlo, si se humedece con secreciones.</li>
             </ul>
           </div>
+          <div className="vacunadaa  segundo"><p>VACUNATE</p></div>
+          <div className="vacunadaa"><p>VACUNATE</p></div>
+
           <div className="rayas">
             <img src={rayas} alt="cargando"/>
           </div>
+          
      </section>
      </>
     );

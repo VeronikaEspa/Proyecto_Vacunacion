@@ -26,7 +26,7 @@ function Menu() {
             <img src={pulso} alt="cargando..." />
         </div>
         <Link to="/Login">
-            <button className="botonMenu link grisFondo botonLogin blancoLetra" type="button">INICIAR SESIÓN</button>
+            <button className="botonMenu link negroFondo botonLogin blancoLetra" type="button">INICIAR SESIÓN</button>
         </Link>
         </section>
      </section>
