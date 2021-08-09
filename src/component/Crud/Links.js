@@ -74,11 +74,11 @@ const Links = () => {
     <div>
         <header className="menuCrud naranja">
         <button onClick={cerrarSesion} className="UsuarioNombre blancoFondo">
-            <div className="botonBienvenidos">
+            <div className="botonBienvenidos alineaCentro">
                 <h3>Bienvenidos</h3>
                 <img src={personaje} className="imagenUsuario" alt="imagenPersonal"/>
             </div>
-                <button className="botonCerrarSesion naranja blancoLetra" id="botonCerrarSesion" onClick={salir}>Cerrar sesión</button>
+                <button className="botonCerrarSesion alineaCentro naranja blancoLetra" id="botonCerrarSesion" onClick={salir}>Cerrar sesión</button>
         </button>
         </header>
         <div className="encimaTabla">

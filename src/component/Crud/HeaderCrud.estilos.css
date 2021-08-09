@@ -20,17 +20,17 @@ header{
 }
 .botonBienvenidos{
     display: flex;
+    padding-left: 30%;
 }
 .UsuarioNombre{
+    position: absolute;
     top: 1%;
     display: flex;
     font-family: 'poppins-regular';
     font-size: 12px;
     border-radius: 50px;
-    position: absolute;
     width: 20%;
     padding: 1%;
-    padding-left: 5%;
     border: 4px solid #CF703B;
     flex-direction: column;
     justify-content: center;
@@ -43,9 +43,6 @@ header{
 }
 .botonCerrarSesion{
     display: none;
-    margin: 10%;
-    padding: 2%;
-    width: 90%;
 }
 .poppinSemibold{
     font-family: 'poppins-semibold';

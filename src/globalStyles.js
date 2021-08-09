@@ -42,10 +42,24 @@ body::-webkit-scrollbar-thumb{
 .blancoLetra{
     color: #FFFFFF;
 }
+// CRUD
 // MARGEN CRUD
 .margenesExternos{
     margin-left: 1%;
     margin-right: 1%;
+}
+// BOTON CERRAR SESION
+#botonCerrarSesion{
+    margin: 1%;
+    margin-top: 2%;
+    padding: 3%;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #CF703B;
+}
+.alineaCentro{
+    align-items: center;
+    justify-content: center;
 }
 // BOTONES
 button{
