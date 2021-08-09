@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb{
 }
 // BOTON CERRAR SESION
 #botonCerrarSesion{
-    margin: 1%;
+    font-family: 'poppins-light';
     margin-top: 2%;
     padding: 3%;
     width: 100%;

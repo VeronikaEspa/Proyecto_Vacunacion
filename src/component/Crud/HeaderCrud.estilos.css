@@ -67,7 +67,6 @@ header{
     padding-left: 8%;
     border-radius: 5px;
     border: 1px solid #9F400C;
-    -moz-transition: all 1s;
     background: url("../../utils/img/lupaBuscar.svg") 5px no-repeat;
 }
 .filtrarUsuario{

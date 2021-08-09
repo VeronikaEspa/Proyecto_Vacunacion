@@ -7,7 +7,6 @@ import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
 import personaje from '../../utils/img/logoCrud.png'
-import lupa from '../../utils/img/lupaBuscar.svg'
 const Links = () => {
 
     const [links, setLinks] = useState([]);
@@ -15,20 +14,20 @@ const Links = () => {
     const addOrEditLink = async (LinkObjets) => {
         if (currentId === ""){
             await db.collection("links").doc().set(LinkObjets)
-            toast('Nueva entrada',{ //Para el coso verde al añadir
+            toast('Usuario añadido con exito',{ //Para el coso verde al añadir
             type: 'success'
         });
         }
         else {
             await db.collection('links').doc(currentId).update(LinkObjets)
-            toast('Actualizado',{ //Para el coso verde al añadir
+            toast('Actualizado información',{ //Para el coso verde al añadir
                 type: 'info'
             });
             setCurrentId('')
         }
     };
     const onDeleteLink = async (id) => {
-        if (window.confirm("estas seguro de querer eliminar este usuario?")){
+        if (window.confirm("¿Estas seguro de querer eliminar este usuario?")){
             await db.collection('links').doc(id).delete();
             toast('Usuario eliminado',{ //Para el coso verde al añadir
                 type: "error",
@@ -51,13 +50,37 @@ const Links = () => {
     useEffect( () => {
         getLinks();
     }, []);
-    // state = {
-    //     divcontainer : false,
-    // }
-    // const HandleChange = e => {
-    //     this.setState({divcontainer:!this.state.divcontainer});
+    // function tipoFiltro(value){
+    //     return function(tipoFiltro){
+    //         return(
+    //             if (value==documento){
+    //                 tipoFiltro.documento.includes(term) || !term;
+    //             };
+    //             elseif(value==nombre){
+    //                 tipoFiltro.nombre.includes(term) || !term;
+    //             };
+    //         );
+    //         };
     //     };
-    // const x = this.state.divcontainer;
+    // };
+    function tipoFiltro(filtro){
+        // selectedValue = document.getElementById("filtroSelect").value;
+        // window.alert(selectedValue);
+        return function(y){
+            return y.documento.includes(filtro) || !filtro;
+        }
+    };
+    function searchingTerm(term){
+        return function(x){
+            return x.nombre.toLowerCase().includes(term) || !term;
+        }
+    };
+    const [data, setData] = React.useState([]);
+    const [term, setTerm] = React.useState("");
+    const [filtro, setFiltro] = React.useState("");
+    React.useEffect(() => {
+        setData(links);
+    },[links])
     function cerrarSesion(boton){
         boton = document.getElementById("botonCerrarSesion");
         boton.classList.toggle("botonCerrarSesion");
@@ -88,13 +111,14 @@ const Links = () => {
                         type="text"
                         className="poppinSemibold buscandoteQueridoUsuario"
                         placeholder="Buscar usuario"
-                        name="usuario"
+                        name="term"
+                        onChange={e => setTerm(e.target.value)}
                         autocomplete="off"
                 />
-                <select className="poppinSemibold filtrarUsuario naranja blancoLetra" name="filtro">
+                <select onChange={e => setFiltro(e.target.value)} id="filtroSelect" className="poppinSemibold filtrarUsuario naranja blancoLetra" name="tipoFiltro">
                          <option selected>Filtrar</option>
-                         <option value="Documento">Documento</option>
-                         <option value="Nombre">Nombre</option>
+                         <option value="documento">Documento</option>
+                         <option value="nombre">Nombre</option>
                 </select>
     </div>
         </div>
@@ -118,7 +142,7 @@ const Links = () => {
                     </tr>
                     </thead>
                     <tbody id="tabla">
-        {links.map(link => (
+        {data.filter(searchingTerm(term)).filter(tipoFiltro(filtro)).map(link => (
                     <tr>
                         <td className="tamañoPequeño">{link.tipoDocumentos}</td>
                         <td className="tamañoMediano">{link.documento}</td>
