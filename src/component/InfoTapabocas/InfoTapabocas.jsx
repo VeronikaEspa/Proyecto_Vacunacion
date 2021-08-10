@@ -4,7 +4,7 @@ import './Info.styles.css'
 function InfoTapabocas() {
     return (
       <>
-      <section className="ContainerTapabocas">
+      <section className="ContainerTapabocas" id="InfoTapabocas" name="InfoTapabocas">
           <div className="tapabocas">
             <img src={tapabocas} alt="cargando..."/>
           </div>

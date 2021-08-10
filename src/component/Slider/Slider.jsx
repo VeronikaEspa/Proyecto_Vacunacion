@@ -6,8 +6,7 @@ import './Slider.styles.css'
 
 function Slider() {
     return (
-      <section className="ContainerSlider naranja">
-        {/*<div className="vacunadaa"><p>VACUNATE</p></div>*/}
+      <section className="ContainerSlider naranja" id="Slider" name="Slider">
         <section class="wrap naranja">
           <div class="tarjeta-wrap">
             <div class="tarjeta">
