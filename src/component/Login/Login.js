@@ -23,6 +23,7 @@ const Login = (props) => {
         </div>
 
     <div className="login_container">
+    <form action="login.jsx">
             <h2>Bienvenido</h2>
             <br>
             </br>
@@ -41,7 +42,7 @@ const Login = (props) => {
                         />
                         <p className="errorMsg">{emailError}</p>
                 </div>
-            <div className="input-div two">
+            <div className="input-div two focus">
                 <div className="i">
                     <i className="fa fa-lock"></i>
                 </div>
@@ -60,14 +61,14 @@ const Login = (props) => {
             <div className="btnContainer">
                     {hasAccount ?(
                         <>
-                        <button onClick={handleSignup}>Crea una cuenta</button>
+                        <button onClick={handleSignup} className="a">Crea una cuenta</button>
                         <p>Si no tienes una cuenta, contacta con el encargado
                             <span onClick={() => setHasAccount(!hasAccount)}>Iniciar sesión</span>
                         </p>
                     </>
                     ) : (
                         <>
-                            <button onClick={handleLogin}>Iniciar sesión</button>
+                            <button onClick={handleLogin} className="btn">Iniciar sesión</button>
                             <p>No tienes una
                                 <span onClick={() => setHasAccount(!hasAccount)}> Cuenta?</span>
                             </p>
@@ -75,6 +76,7 @@ const Login = (props) => {
                     )}
                 </div>
     </div>
+    </form>
     </div>
     </div>
     );
