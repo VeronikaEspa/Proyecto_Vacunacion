@@ -50,29 +50,9 @@ const Links = () => {
     useEffect( () => {
         getLinks();
     }, []);
-    // function tipoFiltro(value){
-    //     return function(tipoFiltro){
-    //         return(
-    //             if (value==documento){
-    //                 tipoFiltro.documento.includes(term) || !term;
-    //             };
-    //             elseif(value==nombre){
-    //                 tipoFiltro.nombre.includes(term) || !term;
-    //             };
-    //         );
-    //         };
-    //     };
-    // };
-    function tipoFiltro(filtro){
-        // selectedValue = document.getElementById("filtroSelect").value;
-        // window.alert(selectedValue);
-        return function(y){
-            return y.documento.includes(filtro) || !filtro;
-        }
-    };
     function searchingTerm(term){
-        return function(x){
-            return x.nombre.toLowerCase().includes(term) || !term;
+        return function(dager){
+            return dager[filtro]?.toLowerCase().includes(term) || !term;
         }
     };
     const [data, setData] = React.useState([]);
@@ -142,7 +122,7 @@ const Links = () => {
                     </tr>
                     </thead>
                     <tbody id="tabla">
-        {data.filter(searchingTerm(term)).filter(tipoFiltro(filtro)).map(link => (
+        {data.filter(searchingTerm(term)).map(link => (
                     <tr>
                         <td className="tamañoPequeño">{link.tipoDocumentos}</td>
                         <td className="tamañoMediano">{link.documento}</td>
