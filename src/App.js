@@ -14,9 +14,10 @@ function App() {
         <GlobalStyles/>
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/Login" exact component={Login}/>
-          <Route path="/Tabla" component={Tabla}/>
+          <Route path="/login" exact component={Login}/>
+          <Route path="/tabla" exact component={Tabla}/>
           <Route path="/" component={Home}/>
+          <Route path="/tabla" component={Tabla}/>
         </Switch>
       </Router>
    </div>
