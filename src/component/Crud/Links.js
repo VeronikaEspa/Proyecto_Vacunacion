@@ -46,7 +46,6 @@ const Links = () => {
         setLinks(docs);
     });
 }
-
     useEffect( () => {
         getLinks();
     }, []);
@@ -72,6 +71,15 @@ const Links = () => {
     const salir = () => {
         firebase.auth().signOut()
         window.location.replace("/Login")
+    };
+    const $detailsList = document.querySelectorAll('details')
+    $detailsList.forEach(($details)=>{
+        $details.querySelector('summary').addEventListener('click', expand)
+    });
+    function expand(){
+        $detailsList.forEach(($details)=>{
+            $details.removeAttribute('open')
+        })
     };
     return(
     <div>
@@ -106,34 +114,34 @@ const Links = () => {
         <LinkForm {...{addOrEditLink, currentId, links}}/>
         </div>
         <div className="acomodaTabla">
-        <table className="tablaResultados">
+        <table className="tablaResultados" id="listaPacientes" className="listaPacientes">
                 <thead className=" naranja blancoLetra encabezadoTabla">
                     <tr>
-                        <th className="chikito2">Tipo</th>
-                        <th>Documento</th>
-                        <th>Nombre completo</th>
-                        <th className="chikito2">Correo</th>
-                        <th>Telefono</th>
-                        <th>Dirección</th>
-                        <th>Sintomatología</th>
-                        <th className="pequeño">Dosis</th>
-                        <th className="pequeño">Laboratorio</th>
-                        <th>Opciones</th>
+                        <th className="fila">Tipo</th>
+                        <th className="fila">Documento</th>
+                        <th className="fila">Nombre completo</th>
+                        <th className="fila">Correo</th>
+                        <th className="fila">Telefono</th>
+                        <th className="fila">Dirección</th>
+                        <th className="fila">Sintomatología</th>
+                        <th className="fila">Dosis</th>
+                        <th className="fila">Laboratorio</th>
+                        <th className="fila">Opciones</th>
                     </tr>
                     </thead>
                     <tbody id="tabla">
         {data.filter(searchingTerm(term)).map(link => (
                     <tr>
-                        <td className="tamañoPequeño">{link.tipoDocumentos}</td>
-                        <td className="tamañoMediano">{link.documento}</td>
-                        <td className="tamañoGrande">{link.nombre}</td>
-                        <td className="tamañoGrande">{link.correo}</td>
-                        <td className="tamañoMediano">{link.telefono}</td>
-                        <td className="tamañoMediano">{link.direccion}</td>
-                        <td className="tamañoGrande">{link.sintomas}</td>
-                        <td className="tamañoPequeño">{link.dosis}</td>
-                        <td className="tamañoMediano">{link.laboratorio}</td>
-                        <td className="botonesOpciones tamañoMediano">
+                        <td className="tamañoPequeño fila">{link.tipoDocumentos}</td>
+                        <td className="tamañoMediano fila">{link.documento}</td>
+                        <td className="tamañoGrande fila">{link.nombre}</td>
+                        <td className="tamañoGrande fila">{link.correo}</td>
+                        <td className="tamañoMediano fila">{link.telefono}</td>
+                        <td className="tamañoMediano fila">{link.direccion}</td>
+                        <td className="tamañoGrande fila">{link.sintomas}</td>
+                        <td className="tamañoPequeño fila">{link.dosis}</td>
+                        <td className="tamañoMediano fila">{link.laboratorio}</td>
+                        <td className="botonesOpciones fila tamañoMediano">
                             <button className="botonEditar" onClick={() => setCurrentId(link.id)}>
                             <img src={lapiz} alt="Editar"/>
                             </button>
@@ -143,6 +151,26 @@ const Links = () => {
             ))}
             </tbody>
             </table>
+                <section className="listaResponsive" id="listaResponsive">
+                {data.filter(searchingTerm(term)).map(link => (
+                    <details>
+                        <summary className="tarjetaUsuarios">
+                            {link.nombre}
+                        </summary>
+                        <ol>
+                            <li>{link.tipoDocumentos}</li>
+                            <li>{link.documento}</li>
+                            <li>{link.nombre}</li>
+                            <li>{link.correo}</li>
+                            <li>{link.telefono}</li>
+                            <li>{link.direccion}</li>
+                            <li>{link.sintomas}</li>
+                            <li>{link.dosis}</li>
+                            <li>{link.laboratorio}</li>
+                        </ol>
+                    </details>
+                    ))}
+                </section>
         </div>
     </div>
     )

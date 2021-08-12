@@ -20,9 +20,10 @@ header{
 }
 .botonBienvenidos{
     display: flex;
-    padding-left: 30%;
 }
 .UsuarioNombre{
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 1%;
     display: flex;
@@ -73,10 +74,36 @@ header{
     font-size: 14px;
     margin: 2%;
     padding: 2%;
-    width: 21%;
     border-radius: 5px;
     border: 1px solid #9F400C;
 }
 .FormularioInscrip{
     display: none;
+}
+@media screen and (min-width:300px) and (max-width:1260px){
+    .imagenUsuario{
+        display: none;
+    }
+}
+@media screen and (min-width:300px) and (max-width:999px){
+    .UsuarioNombre{
+        padding: 0;
+    }
+    #botonCerrarSesion{
+        padding: 0;
+        font-size: 12px;
+        width: 50%;
+    }
+}
+@media screen and (min-width:300px) and (max-width:1204px){
+    .añadirUsuario, .filtrarUsuario, .buscandoteQueridoUsuario, .botonBienvenidos h3{
+        font-size: 12px;
+    }
+    .encimaTabla{
+        column-gap: 0;
+    }
+    .buscandoteQueridoUsuario{
+        background: none;
+        padding-left: 2%;
+    }
 }

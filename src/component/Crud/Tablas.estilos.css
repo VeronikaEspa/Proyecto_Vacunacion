@@ -28,6 +28,11 @@
 .tamañoGrande{
     width: 15%;
 }
+.fila{
+    padding: 1%;
+    padding-left: 0;
+    padding-right: 0;
+}
 th, td {
     font-family: 'poppins-regular';
     font-size: 13px;
@@ -75,3 +80,46 @@ th, td {
  .botonEditar:hover{
     background-color: #FFE665;
  }
+ .listaResponsive{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    font-size: 14px;
+ }
+ .tarjetaUsuarios{
+     border: 1px solid #5B5B5B;
+     margin: 7%;
+     padding: 5%;
+ }
+ @media screen and (min-width:200px) and (max-width:1260px){
+    th, td {
+        font-size: 12px;
+     }
+    .botonEditar{
+        width: 40%;
+        margin: 1%;
+        padding: 0%;
+     }
+    .botonEliminar{
+        margin: 1%;
+        padding: 0;
+        font-size: 15px;
+        width: 40%;
+     }
+}
+@media screen and (min-width:200px) and (max-width:878px){
+    .listaResponsive{
+        display: grid;
+    }
+    table{
+        display: none;
+    }
+}
+@media screen and (min-width:200px) and (max-width:340px){
+    .listaResponsive{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 80px;
+        font-size: 13px;
+    }
+}
