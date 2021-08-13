@@ -11,9 +11,9 @@ function InfoTapabocas() {
           <div className="informacion">
             <p>¿Cómo debe usar Tapabocas?</p>
             <ul>
-              <li>Lava tus manos, ten en cuenta que el tapabocas debe cubrir la nariz y boca</li>
-              <li>El lado blanco deberá ir hacía adentro y el azul hacía afuera</li>
-              <li>Deberás ajustarlo para que quede adherido a la cara</li>
+              <li>Lava tus manos, ten en cuenta que el tapabocas debe cubrir la nariz y la boca.</li>
+              <li>El lado blanco deberá ir hacía adentro y el azul hacia afuera.</li>
+              <li>Deberás ajustarlo para que quede adherido a la cara.</li>
               <li>Deberás cambiarlo, si se humedece con secreciones.</li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
 import personaje from '../../utils/img/logoCrud.png'
-import sy from 'sweetalert'
+//import sweetalert from 'sweetalert'
 const Links = () => {
 
     const [links, setLinks] = useState([]);

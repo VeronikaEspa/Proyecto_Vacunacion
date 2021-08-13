@@ -30,7 +30,7 @@ function Slider() {
                 <p>SERVICIO<br />
                   Somos amables y empáticos.
                   Nuestra vocación es vivir con amor y compasión.
-                  Servir es la fuente de las más auténtica alegría</p>
+                  Servir es la fuente de las más auténtica alegría.</p>
               </div>
             </div>
           </div>

@@ -17,10 +17,7 @@ function App() {
           <Route path="/Login" exact component={Login}/>
           <Route path="/Tabla" exact component={Tabla}/>
           <Route path="/" component={Home}/>
-<<<<<<< HEAD
-=======
           <Route path="/Tabla" component={Tabla}/>
->>>>>>> origin/Veronika
         </Switch>
       </Router>
    </div>
