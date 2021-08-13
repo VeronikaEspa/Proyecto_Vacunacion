@@ -4,7 +4,7 @@ import './Banner.styles.css'
 function Banner() {
     return (
       <>
-      <section className="ContainerBanner negroFondo">
+      <section className="ContainerBanner negroFondo" id="Banner" name="Banner">
         <section className="infoBanner">
           <div className="parrafo">
             <p className="dosis naranjaLetra">Dosis de esperanza</p>

@@ -42,10 +42,24 @@ body::-webkit-scrollbar-thumb{
 .blancoLetra{
     color: #FFFFFF;
 }
+// CRUD
 // MARGEN CRUD
 .margenesExternos{
     margin-left: 1%;
     margin-right: 1%;
+}
+// BOTON CERRAR SESION
+#botonCerrarSesion{
+    font-family: 'poppins-light';
+    margin-top: 2%;
+    padding: 3%;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #CF703B;
+}
+.alineaCentro{
+    align-items: center;
+    justify-content: center;
 }
 // BOTONES
 button{
@@ -76,6 +90,18 @@ button{
     font-family: "poppins-bold";
     src: local("poppins-bold"), url(${PoppinsBold}) format("woff");
     font-weight: normal;
+}
+@media screen and (min-width:300px) and (max-width:999px){
+    #botonCerrarSesion{
+        padding: 0;
+        font-size: 12px;
+        width: 70%;
+        margin-top: 0;
+    }
+    .UsuarioNombre{
+        justify-content: center;
+        align-items: center;
+    }
 }
 `
 export default GlobalStyles;

@@ -2,6 +2,10 @@
     display: grid;
     width: 98%;
     border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0px 13px 5px 3px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0px 13px 5px 3px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 13px 5px 3px rgba(0,0,0,0.19);
 }
 .cardFormulario{
     font-family: 'poppins-semibold';
@@ -62,4 +66,22 @@ label{
 }
 .botonFormGuardar:hover, .botonFormGuardar:active{
     background-color: #212529;
+}
+@media screen and (min-width:100px) and (max-width:999px){
+    .cardFormulario{
+        font-size: 12px;
+        grid-template-columns: 1fr;
+    }
+    .inputTexto{
+        width: 55%;
+    }
+    label{
+        width: 36%;
+    }
+    .selector{
+        width: 58%;
+    }
+    .botonFormGuardar{
+        font-size: 12px;
+    }
 }

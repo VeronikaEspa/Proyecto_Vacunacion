@@ -6,7 +6,8 @@ import './Tablas.estilos.css';
 import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
-import {handleLogout} from '../Login/configLogin'
+import personaje from '../../utils/img/logoCrud.png'
+// import SWal from 'sweetalert'
 const Links = () => {
 
     const [links, setLinks] = useState([]);
@@ -14,20 +15,20 @@ const Links = () => {
     const addOrEditLink = async (LinkObjets) => {
         if (currentId === ""){
             await db.collection("links").doc().set(LinkObjets)
-            toast('Nueva entrada',{ //Para el coso verde al añadir
+            toast('Usuario añadido con exito',{ //Para el coso verde al añadir
             type: 'success'
         });
         }
         else {
             await db.collection('links').doc(currentId).update(LinkObjets)
-            toast('Actualizado',{ //Para el coso verde al añadir
+            toast('Actualizado información',{ //Para el coso verde al añadir
                 type: 'info'
             });
             setCurrentId('')
         }
     };
     const onDeleteLink = async (id) => {
-        if (window.confirm("estas seguro de querer eliminar este usuario?")){
+        if (window.confirm("¿Estas seguro de querer eliminar este usuario?")){
             await db.collection('links').doc(id).delete();
             toast('Usuario eliminado',{ //Para el coso verde al añadir
                 type: "error",
@@ -35,6 +36,19 @@ const Links = () => {
             });
         }
     }
+    // const onDeleteLink = async (id) => {
+    //     if (
+    //         sweetAlert ({
+    //             title: "Titulo",
+    //             text: "Texto",
+    //             icon: "warning",
+    //             buttons: ["No", "Si"]
+    //         }).then(respuesta => {
+    //             if(respuesta==="Si"){
+    //                await db.collection('links').doc(id).delete()
+    //         }})
+    //     );
+    // };
     const getLinks = async() =>{
         db.collection("links")
         .onSnapshot((querySnapshot) => {
@@ -46,20 +60,20 @@ const Links = () => {
         setLinks(docs);
     });
 }
-
     useEffect( () => {
         getLinks();
     }, []);
-    // state = {
-    //     divcontainer : false,
-    // }
-    // const HandleChange = e => {
-    //     this.setState({divcontainer:!this.state.divcontainer});
-    //     };
-    // const x = this.state.divcontainer;
-
-
-
+    function searchingTerm(term){
+        return function(dager){
+            return dager[filtro]?.toLowerCase().includes(term) || !term;
+        }
+    };
+    const [data, setData] = React.useState([]);
+    const [term, setTerm] = React.useState("");
+    const [filtro, setFiltro] = React.useState("");
+    React.useEffect(() => {
+        setData(links);
+    },[links])
     function cerrarSesion(boton){
         boton = document.getElementById("botonCerrarSesion");
         boton.classList.toggle("botonCerrarSesion");
@@ -76,8 +90,11 @@ const Links = () => {
     <div>
         <header className="menuCrud naranja">
         <button onClick={cerrarSesion} className="UsuarioNombre blancoFondo">
-            <h3>Bienvenido, Juan Pablo Corredor</h3>
-        <button className="botonCerrarSesion naranja blancoLetra" id="botonCerrarSesion" onClick={salir}>Cerrar sesión</button>
+            <div className="botonBienvenidos alineaCentro">
+                <h3>Bienvenidos</h3>
+                <img src={personaje} className="imagenUsuario" alt="imagenPersonal"/>
+            </div>
+                <button className="botonCerrarSesion alineaCentro naranja blancoLetra" id="botonCerrarSesion" onClick={salir}>Cerrar sesión</button>
         </button>
         </header>
         <div className="encimaTabla">
@@ -85,51 +102,51 @@ const Links = () => {
             <div className="filtraryBuscarUsuario">
                 <input
                         type="text"
-                        className="buscarUsuario poppinSemibold"
-                        placeholder="Buscar usuario"
-                        name="usuario"
+                        className="poppinSemibold buscandoteQueridoUsuario"
+                        placeholder="Buscar usuario en minuscula"
+                        name="term"
+                        onChange={e => setTerm(e.target.value)}
                         autocomplete="off"
-                        />
-                <select className="poppinSemibold filtrarUsuario naranja blancoLetra" name="filtro">
+                />
+                <select onChange={e => setFiltro(e.target.value)} id="filtroSelect" className="poppinSemibold filtrarUsuario naranja blancoLetra" name="tipoFiltro">
                          <option selected>Filtrar</option>
-                         <option value="Documento">Documento</option>
-                         <option value="Nombre">Nombre</option>
-                         {/* <<https://youtu.be/yMKTRn_THeA  Ver ese video para hacer un checkbox en un select>> */}
+                         <option value="documento">Documento</option>
+                         <option value="nombre">Nombre</option>
                 </select>
-            </div>
+    </div>
         </div>
         <div className="FormularioInscrip" id="formulario">
         <LinkForm {...{addOrEditLink, currentId, links}}/>
         </div>
         <div className="acomodaTabla">
-        <table className="tablaResultados">
+        <table className="tablaResultados" id="listaPacientes" className="listaPacientes">
                 <thead className=" naranja blancoLetra encabezadoTabla">
                     <tr>
-                        <th className="chikito2">Tipo</th>
-                        <th>Documento</th>
-                        <th>Nombre completo</th>
-                        <th className="chikito2">Correo</th>
-                        <th>Telefono</th>
-                        <th>Dirección</th>
-                        <th>Sintomatología</th>
-                        <th className="pequeño">Dosis</th>
-                        <th className="pequeño">Laboratorio</th>
-                        <th>Opciones</th>
+                        <th className="fila">Tipo</th>
+                        <th className="fila">Documento</th>
+                        <th className="fila">Nombre completo</th>
+                        <th className="fila">Correo</th>
+                        <th className="fila">Teléfono</th>
+                        <th className="fila">Dirección</th>
+                        <th className="fila">Sintomatología</th>
+                        <th className="fila">Dosis</th>
+                        <th className="fila">Laboratorio</th>
+                        <th className="fila">Opciones</th>
                     </tr>
                     </thead>
                     <tbody id="tabla">
-        {links.map(link => (
+        {data.filter(searchingTerm(term)).map(link => (
                     <tr>
-                        <td className="tamañoPequeño">{link.tipoDocumentos}</td>
-                        <td className="tamañoMediano">{link.documento}</td>
-                        <td className="tamañoGrande">{link.nombre}</td>
-                        <td className="tamañoGrande">{link.correo}</td>
-                        <td className="tamañoMediano">{link.telefono}</td>
-                        <td className="tamañoMediano">{link.direccion}</td>
-                        <td className="tamañoGrande">{link.sintomas}</td>
-                        <td className="tamañoPequeño">{link.dosis}</td>
-                        <td className="tamañoMediano">{link.laboratorio}</td>
-                        <td className="botonesOpciones tamañoMediano">
+                        <td className="tamañoPequeño fila">{link.tipoDocumentos}</td>
+                        <td className="tamañoMediano fila">{link.documento}</td>
+                        <td className="tamañoGrande fila">{link.nombre}</td>
+                        <td className="tamañoGrande fila">{link.correo}</td>
+                        <td className="tamañoMediano fila">{link.telefono}</td>
+                        <td className="tamañoMediano fila">{link.direccion}</td>
+                        <td className="tamañoGrande fila">{link.sintomas}</td>
+                        <td className="tamañoPequeño fila">{link.dosis}</td>
+                        <td className="tamañoMediano fila">{link.laboratorio}</td>
+                        <td className="botonesOpciones fila tamañoMediano">
                             <button className="botonEditar" onClick={() => setCurrentId(link.id)}>
                             <img src={lapiz} alt="Editar"/>
                             </button>
@@ -139,6 +156,26 @@ const Links = () => {
             ))}
             </tbody>
             </table>
+                <section className="listaResponsive" id="listaResponsive">
+                {data.filter(searchingTerm(term)).map(link => (
+                    <details>
+                        <summary className="tarjetaUsuarios">
+                            {link.nombre}
+                        </summary>
+                        <ol>
+                            <li>{link.tipoDocumentos}</li>
+                            <li>{link.documento}</li>
+                            <li>{link.nombre}</li>
+                            <li>{link.correo}</li>
+                            <li>{link.telefono}</li>
+                            <li>{link.direccion}</li>
+                            <li>{link.sintomas}</li>
+                            <li>{link.dosis}</li>
+                            <li>{link.laboratorio}</li>
+                        </ol>
+                    </details>
+                    ))}
+                </section>
         </div>
     </div>
     )

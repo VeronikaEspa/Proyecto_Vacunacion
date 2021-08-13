@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Estilos Login
 html, body{
     padding: 0;
@@ -134,3 +135,5 @@ form h2{
 .btn:hover{
     background-position: right;
 }
+=======
+>>>>>>> origin/Veronika

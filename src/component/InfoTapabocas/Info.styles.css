@@ -13,12 +13,26 @@
     position: absolute;
     z-index: 2;
     margin-left: 40%;
-    margin-top: 4%;
+    margin-top: 2%;
 }
-
+ul { list-style-image: url('../../utils/img/IconoTapabocas.png'); }
+.vacunadaa {
+    display: flex;
+    font-family: "poppins-bold";
+    font-size: 50px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 200px;
+    margin-left: 550px;
+}
+.segundo{
+    margin-top: 200px;
+    margin-left: 546px;
+    color: #da8659af;
+}
 .rayas {
     position: relative;
     z-index: 1;
-    margin-left: 74%;
+    margin-left: 73%;
     margin-top: 2%;
 }

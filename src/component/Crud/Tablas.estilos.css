@@ -28,6 +28,11 @@
 .tamañoGrande{
     width: 15%;
 }
+.fila{
+    padding: 1%;
+    padding-left: 0;
+    padding-right: 0;
+}
 th, td {
     font-family: 'poppins-regular';
     font-size: 13px;
@@ -65,6 +70,9 @@ th, td {
  .botonEditar{
     width: 40%;
     margin: 2%;
+    padding: 5%;
+    padding-left: 0;
+    padding-right: 0;
     border: 1px solid #FFE665;
     border-radius: 5px;
     background-color: #E8CE47;
@@ -72,3 +80,57 @@ th, td {
  .botonEditar:hover{
     background-color: #FFE665;
  }
+ .listaResponsive{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    font-size: 14px;
+ }
+ .tarjetaUsuarios{
+    border: 1px solid #5B5B5B;
+    border-radius: 20px;
+    margin: 7%;
+    padding: 5%;
+ }
+ /* Para cambiar la flecha de la lista
+ summary::-webkit-details-marker {
+    display: none
+  }
+  summary:before {
+    content: ">";
+  }
+  details[open] > summary:before {
+    content: "v";
+  } */
+ @media screen and (min-width:100px) and (max-width:1260px){
+    th, td {
+        font-size: 12px;
+     }
+    .botonEditar{
+        width: 40%;
+        margin: 1%;
+        padding: 0%;
+     }
+    .botonEliminar{
+        margin: 1%;
+        padding: 0;
+        font-size: 15px;
+        width: 40%;
+     }
+}
+@media screen and (min-width:100px) and (max-width:878px){
+    .listaResponsive{
+        display: grid;
+    }
+    table{
+        display: none;
+    }
+}
+@media screen and (min-width:100px) and (max-width:420px){
+    .listaResponsive{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 80px;
+        font-size: 13px;
+    }
+}
