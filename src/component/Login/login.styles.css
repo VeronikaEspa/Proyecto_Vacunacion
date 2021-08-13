@@ -70,9 +70,11 @@ form h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 5px;
 }
 .i i{
     color: #8d8d8d;
+    
 }
 .input-div > div{
     position: relative;
@@ -132,3 +134,22 @@ form h2{
 .btn:hover{
     background-position: right;
 }
+
+@media screen and (max-width:1050px){
+    .container{
+        grid-gap: 5 rem; 
+    }
+}
+@media screen and (max-width:1000px){
+    form{
+    width:290px;
+   }
+    form h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+    .img img{
+        width: 400px;
+    }
+}
+

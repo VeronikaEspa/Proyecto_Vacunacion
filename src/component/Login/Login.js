@@ -32,7 +32,7 @@ const Login = (props) => {
             <div className="input-div one focus">
                 <div className="i">
                     <i className="fa fa-user"></i>
-                    <img src={Usuario} alt="cargando..."/>
+                    
                 </div>
                 <div className="loginContainer">
                         <label>Usuario: </label>
@@ -45,10 +45,10 @@ const Login = (props) => {
                         />
                         <p className="errorMsg">{emailError}</p>
                 </div>
+            </div>
             <div className="input-div two focus">
                 <div className="i">
-                    <img src={pass} alt="cargando..."/>
-                    
+                   
                 </div>
                 <div>
                         <label>Contraseña: </label>
@@ -66,7 +66,7 @@ const Login = (props) => {
                     {hasAccount ?(
                         <>
                         <button onClick={handleSignup} className="a">Crea una cuenta</button>
-                        <p>Si no tienes una cuenta, contacta con el encargado
+                        <p>Si no tienes una cuenta, contacta con el encargado.
                             <span onClick={() => setHasAccount(!hasAccount)}>Iniciar sesión</span>
                         </p>
                     </>
@@ -79,7 +79,7 @@ const Login = (props) => {
                         </>
                     )}
                 </div>
-    </div>
+    
     </form>
     </div>
     </div>
