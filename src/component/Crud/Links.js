@@ -7,6 +7,7 @@ import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
 import personaje from '../../utils/img/logoCrud.png'
+// import SWal from 'sweetalert'
 const Links = () => {
 
     const [links, setLinks] = useState([]);
@@ -35,6 +36,19 @@ const Links = () => {
             });
         }
     }
+    // const onDeleteLink = async (id) => {
+    //     if (
+    //         sweetAlert ({
+    //             title: "Titulo",
+    //             text: "Texto",
+    //             icon: "warning",
+    //             buttons: ["No", "Si"]
+    //         }).then(respuesta => {
+    //             if(respuesta==="Si"){
+    //                await db.collection('links').doc(id).delete()
+    //         }})
+    //     );
+    // };
     const getLinks = async() =>{
         db.collection("links")
         .onSnapshot((querySnapshot) => {
@@ -112,7 +126,7 @@ const Links = () => {
                         <th className="fila">Documento</th>
                         <th className="fila">Nombre completo</th>
                         <th className="fila">Correo</th>
-                        <th className="fila">Telefono</th>
+                        <th className="fila">Teléfono</th>
                         <th className="fila">Dirección</th>
                         <th className="fila">Sintomatología</th>
                         <th className="fila">Dosis</th>

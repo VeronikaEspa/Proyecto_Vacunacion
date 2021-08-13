@@ -42,9 +42,10 @@ import './LinkForm.css'
                     <label className="blancoLetra">Documento</label>
                     <select className=" inputs selectorDocumento" name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
                          <option value="" selected>Ingresar tipo de documento</option>
-                         <option value="C.C">Cedula de ciudadania</option>
+                         <option value="C.C">Cédula de ciudadania</option>
                          <option value="T.I">Tarjeta de identidad</option>
-                         <option value="C.E">Cedula de extranjeria</option>
+                         <option value="C.E">Cédula de extranjeria</option>
+                         <option value="P.E.P">Permiso especial de permanencia</option>
                     </select>
                     <input
                     type="text"
