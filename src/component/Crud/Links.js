@@ -72,15 +72,6 @@ const Links = () => {
         firebase.auth().signOut()
         window.location.replace("/Login")
     };
-    const $detailsList = document.querySelectorAll('details')
-    $detailsList.forEach(($details)=>{
-        $details.querySelector('summary').addEventListener('click', expand)
-    });
-    function expand(){
-        $detailsList.forEach(($details)=>{
-            $details.removeAttribute('open')
-        })
-    };
     return(
     <div>
         <header className="menuCrud naranja">
@@ -98,7 +89,7 @@ const Links = () => {
                 <input
                         type="text"
                         className="poppinSemibold buscandoteQueridoUsuario"
-                        placeholder="Buscar usuario"
+                        placeholder="Buscar usuario en minuscula"
                         name="term"
                         onChange={e => setTerm(e.target.value)}
                         autocomplete="off"

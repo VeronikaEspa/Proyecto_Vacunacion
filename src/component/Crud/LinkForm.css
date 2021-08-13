@@ -67,3 +67,21 @@ label{
 .botonFormGuardar:hover, .botonFormGuardar:active{
     background-color: #212529;
 }
+@media screen and (min-width:100px) and (max-width:999px){
+    .cardFormulario{
+        font-size: 12px;
+        grid-template-columns: 1fr;
+    }
+    .inputTexto{
+        width: 55%;
+    }
+    label{
+        width: 36%;
+    }
+    .selector{
+        width: 58%;
+    }
+    .botonFormGuardar{
+        font-size: 12px;
+    }
+}

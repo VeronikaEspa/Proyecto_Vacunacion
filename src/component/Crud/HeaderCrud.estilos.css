@@ -80,12 +80,12 @@ header{
 .FormularioInscrip{
     display: none;
 }
-@media screen and (min-width:300px) and (max-width:1260px){
+@media screen and (min-width:100px) and (max-width:1260px){
     .imagenUsuario{
         display: none;
     }
 }
-@media screen and (min-width:300px) and (max-width:999px){
+@media screen and (min-width:100px) and (max-width:999px){
     .UsuarioNombre{
         padding: 0;
     }
@@ -95,7 +95,10 @@ header{
         width: 50%;
     }
 }
-@media screen and (min-width:300px) and (max-width:1204px){
+@media screen and (min-width:100px) and (max-width:1204px){
+    .encimaTabla{
+        width: 90%;
+    }
     .añadirUsuario, .filtrarUsuario, .buscandoteQueridoUsuario, .botonBienvenidos h3{
         font-size: 12px;
     }
@@ -105,5 +108,33 @@ header{
     .buscandoteQueridoUsuario{
         background: none;
         padding-left: 2%;
+        width: 50%;
+    }
+    .filtrarUsuario, .buscandoteQueridoUsuario{
+        margin: 0%;
+        height: 50%;
+    }
+    .filtraryBuscarUsuario{
+        justify-content:space-between;
+    }
+    .añadirUsuario{
+        margin: 2%;
+    }
+}
+@media screen and (min-width:100px) and (max-width:650px){
+    .encimaTabla{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 20%;
+    }
+    .añadirUsuario{
+      width: auto;
+    }
+    .menuCrud{
+        padding: 5%;
+    }
+    .UsuarioNombre{
+        width: 90%;
     }
 }

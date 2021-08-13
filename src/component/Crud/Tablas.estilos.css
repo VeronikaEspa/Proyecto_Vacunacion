@@ -87,11 +87,22 @@ th, td {
     font-size: 14px;
  }
  .tarjetaUsuarios{
-     border: 1px solid #5B5B5B;
-     margin: 7%;
-     padding: 5%;
+    border: 1px solid #5B5B5B;
+    border-radius: 20px;
+    margin: 7%;
+    padding: 5%;
  }
- @media screen and (min-width:200px) and (max-width:1260px){
+ /* Para cambiar la flecha de la lista
+ summary::-webkit-details-marker {
+    display: none
+  }
+  summary:before {
+    content: ">";
+  }
+  details[open] > summary:before {
+    content: "v";
+  } */
+ @media screen and (min-width:100px) and (max-width:1260px){
     th, td {
         font-size: 12px;
      }
@@ -107,7 +118,7 @@ th, td {
         width: 40%;
      }
 }
-@media screen and (min-width:200px) and (max-width:878px){
+@media screen and (min-width:100px) and (max-width:878px){
     .listaResponsive{
         display: grid;
     }
@@ -115,7 +126,7 @@ th, td {
         display: none;
     }
 }
-@media screen and (min-width:200px) and (max-width:340px){
+@media screen and (min-width:100px) and (max-width:420px){
     .listaResponsive{
         display: grid;
         grid-template-columns: 1fr;
