@@ -7,7 +7,7 @@ import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
 import personaje from '../../utils/img/logoCrud.png'
-// import SWal from 'sweetalert'
+import sy from 'sweetalert'
 const Links = () => {
 
     const [links, setLinks] = useState([]);
@@ -45,7 +45,7 @@ const Links = () => {
     //             buttons: ["No", "Si"]
     //         }).then(respuesta => {
     //             if(respuesta==="Si"){
-    //                await db.collection('links').doc(id).delete()
+    //                 await db.collection('links').doc(id).delete();
     //         }})
     //     );
     // };
