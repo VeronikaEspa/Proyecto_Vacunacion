@@ -1,5 +1,7 @@
 import React from 'react';
 import enfermera from '../../utils/img/enfermera.PNG'
+import Usuario from '../../utils/img/user.png'
+import pass from '../../utils/img/pass.png'
 import './login.styles.css'
 
 const Login = (props) => {
@@ -30,6 +32,7 @@ const Login = (props) => {
             <div className="input-div one focus">
                 <div className="i">
                     <i className="fa fa-user"></i>
+                    <img src={Usuario} alt="cargando..."/>
                 </div>
                 <div className="loginContainer">
                         <label>Usuario: </label>
@@ -44,7 +47,8 @@ const Login = (props) => {
                 </div>
             <div className="input-div two focus">
                 <div className="i">
-                    <i className="fa fa-lock"></i>
+                    <img src={pass} alt="cargando..."/>
+                    
                 </div>
                 <div>
                         <label>Contraseña: </label>
