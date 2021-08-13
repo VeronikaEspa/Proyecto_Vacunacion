@@ -73,7 +73,7 @@ const Links = () => {
         window.location.replace("/Login")
     };
     return(
-    <div>
+    <div className="CrudCompleto">
         <header className="menuCrud naranja">
         <button onClick={cerrarSesion} className="UsuarioNombre blancoFondo">
             <h3>Bienvenido, Juan Pablo Corredor</h3>
