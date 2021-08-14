@@ -25,14 +25,13 @@ const Login = (props) => {
         </div>
 
     <div className="login_container">
-    <form action="login.jsx">
+    <form action="">
             <h2>Bienvenido</h2>
             <br>
             </br>
             <div className="input-div one focus">
                 <div className="i">
                     <i className="fa fa-user"></i>
-                    
                 </div>
                 <div className="loginContainer">
                         <label>Usuario: </label>
@@ -48,7 +47,6 @@ const Login = (props) => {
             </div>
             <div className="input-div two focus">
                 <div className="i">
-                   
                 </div>
                 <div>
                         <label>Contraseña: </label>
@@ -79,7 +77,6 @@ const Login = (props) => {
                         </>
                     )}
                 </div>
-    
     </form>
     </div>
     </div>
