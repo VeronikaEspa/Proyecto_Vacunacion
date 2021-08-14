@@ -35,17 +35,17 @@ const Links = () => {
                 autoClose: 2000,
             });
         }
-    }
+    };
     // const onDeleteLink = async (id) => {
     //     if (
-    //         sweetAlert ({
+    //         sweetalert ({
     //             title: "Titulo",
     //             text: "Texto",
     //             icon: "warning",
     //             buttons: ["No", "Si"]
     //         }).then(respuesta => {
-    //             if(respuesta==="Si"){
-    //                 await db.collection('links').doc(id).delete();
+    //             if(respuesta=="Si"){
+    //                 db.collection('links').doc(id).delete();
     //         }})
     //     );
     // };
