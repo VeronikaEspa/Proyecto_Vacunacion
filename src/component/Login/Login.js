@@ -25,7 +25,6 @@ const Login = (props) => {
         </div>
 
     <div className="login_container">
-    <form action="">
             <h2>Bienvenido</h2>
             <br>
             </br>
@@ -77,7 +76,6 @@ const Login = (props) => {
                         </>
                     )}
                 </div>
-    </form>
     </div>
     </div>
     );
