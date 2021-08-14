@@ -7,7 +7,7 @@ import "./HeaderCrud.estilos.css";
 import {toast} from 'react-toastify'
 import lapiz from '../../utils/img/lapiz-editar.svg'
 import personaje from '../../utils/img/logoCrud.png'
-import sy from 'sweetalert'
+import sweetAlert from 'sweetalert'
 const Links = () => {
 
     const [links, setLinks] = useState([]);
@@ -35,7 +35,7 @@ const Links = () => {
                 autoClose: 2000,
             });
         }
-    }
+    };
     // const onDeleteLink = async (id) => {
     //     if (
     //         sweetAlert ({
@@ -44,8 +44,8 @@ const Links = () => {
     //             icon: "warning",
     //             buttons: ["No", "Si"]
     //         }).then(respuesta => {
-    //             if(respuesta==="Si"){
-    //                 await db.collection('links').doc(id).delete();
+    //             if(respuesta=="Si"){
+    //                 db.collection('links').doc(id).delete();
     //         }})
     //     );
     // };
