@@ -1,38 +1,67 @@
 .ContainerTapabocas {
     display: flex;
+    flex-direction: column;
     font-family: "poppins-semibold";
+    justify-content:flex-end;
+    align-content: center;
 }
  .tapabocas img{
-    box-shadow: 10px 10px 5px #CF703B;
+    box-shadow: 10px 10px 5px #cf703b7a;
 }
-.tapabocas {
-    position: absolute;
-    z-index: 2;
+.ImagenTapabocasEiNfo{
+    display: flex;
+    flex-direction: row;
 }
 .informacion {
-    position: absolute;
-    z-index: 2;
-    margin-left: 40%;
-    margin-top: 2%;
+    margin-left: 2%;
 }
-ul { list-style-image: url('../../utils/img/IconoTapabocas.png'); }
+ul {list-style-image: url('../../utils/img/IconoTapabocas.png');}
 .vacunadaa {
     display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.vacunadaa p{
     font-family: "poppins-bold";
     font-size: 50px;
-    position: absolute;
-    z-index: 2;
-    margin-top: 200px;
-    margin-left: 550px;
-}
-.segundo{
-    margin-top: 200px;
-    margin-left: 546px;
-    color: #da8659af;
+    text-shadow: -4px 4px 1px #da8659af;
 }
 .rayas {
-    position: relative;
+    display: flex;
+    margin-left: 70%;
+    position: absolute;
     z-index: 1;
-    margin-left: 73%;
-    margin-top: 2%;
+}
+@media screen and (min-width:100px) and (max-width:1165px){
+    .ContainerTapabocas{
+        margin-top: 2%;
+    }
+    .tapabocas img{
+        width: 96%;
+    }
+    .rayas{
+        display: none;
+    }
+}
+@media screen and (min-width:100px) and (max-width:760px){
+    .ContainerTapabocas{
+        justify-content:flex-end;
+        align-content: center;
+    }
+    .tapabocas img{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .ImagenTapabocasEiNfo{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .informacion {
+        font-size: 14px;
+    }
+    .vacunadaa p{
+        font-size: 35px;
+    }
 }

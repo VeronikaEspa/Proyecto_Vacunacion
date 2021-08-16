@@ -2,12 +2,10 @@
     padding: 3%;
     font-family: "poppins-regular";
 }
-
 .ContainerMenu {
     display: flex;
     justify-content: space-between;
 }
-
 /*Botones*/
 .botonMenu {
     width: 120px;
@@ -21,10 +19,6 @@
     background-color: #e68e5f;
     opacity: 3px;
 }
-.pulso {
-    position: relative;
-    z-index: 1;
-}
 .Menu {
     display: flex;
     height: 5%;
@@ -36,21 +30,65 @@
     align-items: center;
     justify-content: space-between;
 }
-
 .botonLogin{
     width: 100%;
     height: 60%;
     border-radius: 10px;
 }
-
 .botonLogin:hover{
     background-color: #3e4042;
     opacity: 3px;
 }
-
-
-
-
-
-
-
+.logoPequeño{
+    display: none;
+}
+@media screen and (min-width:100px) and (max-width:880px){
+    .logoPequeño{
+        display: block;
+    }
+    .logoGrande{
+        display: none;
+    }
+    .pulso{
+        display: none;
+    }
+    .Menu{
+        justify-content: center;
+        width: 30%;
+    }
+    .botonMenu{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:650px) and (max-width:1200px){
+    .pulso img{
+        width: 90%;
+    }
+    .pulso{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .Menu {
+        margin-top: 14px;
+    }
+}
+@media screen and (min-width:610px) and (max-width:680px){
+    .Menu{
+        display: flex;
+        justify-content: space-around;
+        position:initial;
+        margin: 0;
+    }
+    .pulso{
+        display: none;
+    }
+}
+@media screen and (min-width:100px) and (max-width:600px){
+    .Menu{
+        display: none;
+    }
+    .pulso{
+        display: none;
+    }
+}

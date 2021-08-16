@@ -74,7 +74,6 @@ form h2{
 }
 .i i{
     color: #8d8d8d;
-    
 }
 .input-div > div{
     position: relative;
@@ -85,7 +84,7 @@ form h2{
     top: 50%;
     transform: translateY(-50%);
     color: #999;
-    font-size: 18px; 
+    font-size: 18px;
     transition: .3s;
 }
 .input{
@@ -112,7 +111,6 @@ form h2{
 }
 .a:hover{
     color:#CF703B;
-
 }
 .btn{
     display: block;
@@ -134,10 +132,9 @@ form h2{
 .btn:hover{
     background-position: right;
 }
-
 @media screen and (max-width:1050px){
     .container{
-        grid-gap: 5 rem; 
+        grid-gap: 5 rem;
     }
 }
 @media screen and (max-width:1000px){

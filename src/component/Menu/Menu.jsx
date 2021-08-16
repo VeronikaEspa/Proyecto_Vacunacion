@@ -1,4 +1,5 @@
 import logo from '../../utils/img/Logo.png'
+import logoPequeño from '../../utils/img/logoCrud.png'
 import jeringa from '../../utils/img/Jeringa.png'
 import pulso from '../../utils/img/Pulso.png'
 import {Link} from "react-router-dom"
@@ -9,9 +10,14 @@ function Menu() {
       <section className="Container ">
           {/*Contenido del menu*/}
         <section className="ContainerMenu">
-        <div className="forja">
+        <div className="forja logoGrande">
             <Link to="/">
                 <img src={logo} alt="Logo empresarial" />
+            </Link>
+        </div>
+        <div className="forja logoPequeño">
+            <Link to="/">
+                <img src={logoPequeño} alt="Logo empresarial" />
             </Link>
         </div>
         {/*<div>

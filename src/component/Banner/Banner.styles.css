@@ -10,16 +10,135 @@
     margin-top: 5%;
     font-family: "poppins-semibold";
 }
-
 .imagenBanner img{
     margin: 2%;
     width: 1000px;
     height: 220px;
 }
-
 .cov {
     font-size: 40px;
 }
 .consulta {
     margin-left: 50%;
+}
+@media screen and (min-width:681px) and (max-width:1165px){
+    .infoBanner {
+        align-content: center;
+        flex-direction:row;
+    }
+    .parrafo {
+        line-height: 0px;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        margin-top: 0;
+    }
+    .dosis{
+        line-height: 2;
+    }
+    .cov{
+        margin: 15%;
+    }
+    .imagenBanner{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .imagenBanner img{
+        display: block;
+        width: 90%;
+        margin: 0;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+    .consulta {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-left: 0%;
+    }
+}
+@media screen and (min-width:100px) and (max-width:680px){
+    .infoBanner {
+        align-content: center;
+        flex-direction:row;
+    }
+    .parrafo {
+        line-height: 0px;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        margin-top: 0;
+    }
+    .dosis{
+        line-height: 1;
+    }
+    .cov{
+        margin-top: 10%;
+        font-size: 30px;
+    }
+    .imagenBanner{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .imagenBanner img{
+        display: block;
+        width: 90%;
+        height: 80%;
+        margin: 0;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+    .consulta {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-left: 0%;
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:100px) and (max-width:530px){
+    .consulta {
+        margin-left: 2%;
+        margin-right: 2%;
+        align-content: center;
+        text-align: center;
+    }
+    .cov{
+        font-size: 20px;
+    }
+    .dosis{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:100px) and (max-width:460px){
+    .infoBanner {
+        align-content: center;
+        flex-direction:column;
+    }
+    .parrafo {
+        line-height: 0px;
+        margin-left: 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .consulta {
+        margin-left: 2%;
+        margin-right: 2%;
+        align-content: center;
+        text-align: center;
+    }
+    .cov{
+        margin-left: 2%;
+        font-size: 20px;
+    }
+    .dosis{
+        font-size: 14px;
+    }
 }

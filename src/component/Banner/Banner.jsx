@@ -15,8 +15,8 @@ function Banner() {
           <img src={principal} alt="cargando..."/>
         </div>
         </section>
-        <div>
-          <p className="consulta blancoLetra" >Consulta tu priorización en "Mi vacuna" y asiste al Centro Comercial Bulevar</p>
+        <div className="consulta">
+          <p className="blancoLetra" >Consulta tu priorización en "Mi vacuna" y asiste al Centro Comercial Bulevar</p>
         </div>
      </section>
      </>
