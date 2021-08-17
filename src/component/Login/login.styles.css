@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-gap: 17rem;
+    grid-gap: 14rem;
 }
 .img img{
     width: 500px;
