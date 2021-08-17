@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Proyecto_Vacunacion/static/css/main.7fbef039.chunk.css",
-    "main.js": "/Proyecto_Vacunacion/static/js/main.02445790.chunk.js",
-    "main.js.map": "/Proyecto_Vacunacion/static/js/main.02445790.chunk.js.map",
+    "main.js": "/Proyecto_Vacunacion/static/js/main.85b4d532.chunk.js",
+    "main.js.map": "/Proyecto_Vacunacion/static/js/main.85b4d532.chunk.js.map",
     "runtime-main.js": "/Proyecto_Vacunacion/static/js/runtime-main.223995aa.js",
     "runtime-main.js.map": "/Proyecto_Vacunacion/static/js/runtime-main.223995aa.js.map",
     "static/css/2.68b64559.chunk.css": "/Proyecto_Vacunacion/static/css/2.68b64559.chunk.css",
@@ -19,7 +19,7 @@
     "static/media/Poppins-Regular.d391a2f4.woff": "/Proyecto_Vacunacion/static/media/Poppins-Regular.d391a2f4.woff",
     "static/media/Poppins-SemiBold.4c45f2d1.woff": "/Proyecto_Vacunacion/static/media/Poppins-SemiBold.4c45f2d1.woff",
     "static/media/Tapabocas.726c33b3.png": "/Proyecto_Vacunacion/static/media/Tapabocas.726c33b3.png",
-    "static/media/enfermera.b35fb359.png": "/Proyecto_Vacunacion/static/media/enfermera.b35fb359.png",
+    "static/media/enfermera.b35fb359.PNG": "/Proyecto_Vacunacion/static/media/enfermera.b35fb359.PNG",
     "static/media/lapiz-editar.bbf2eaa7.svg": "/Proyecto_Vacunacion/static/media/lapiz-editar.bbf2eaa7.svg",
     "static/media/HeaderCrud.estilos.css": "/Proyecto_Vacunacion/static/media/lupaBuscar.74518add.svg"
   },
@@ -28,6 +28,6 @@
     "static/css/2.68b64559.chunk.css",
     "static/js/2.e1da087a.chunk.js",
     "static/css/main.7fbef039.chunk.css",
-    "static/js/main.02445790.chunk.js"
+    "static/js/main.85b4d532.chunk.js"
   ]
 }
