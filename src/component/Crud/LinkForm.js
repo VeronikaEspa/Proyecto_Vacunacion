@@ -39,7 +39,7 @@ import './LinkForm.css'
          <div className="naranja formulario margenesExternos">
          <form className="cardFormulario" onSubmit={handleSubmit}>
                <div className="padreInput textoInputs">
-                    <label className="blancoLetra">Documento</label>
+                    <label className="labelLinkForm blancoLetra">Documento</label>
                     <select className=" inputs selectorDocumento" name="tipoDocumentos" value={values.tipoDocumentos} onChange={handleInputChange}>
                          <option value="" selected>Ingresar tipo de documento</option>
                          <option value="C.C">Cédula de ciudadania</option>
@@ -59,7 +59,7 @@ import './LinkForm.css'
                     />
                </div>
                <div className=" padreInput textoInputs">
-                    <label className="blancoLetra">Dirección</label>
+                    <label className="labelLinkForm blancoLetra">Dirección</label>
                     <input
                     type="text"
                     className="inputTexto inputs"
@@ -72,7 +72,7 @@ import './LinkForm.css'
                     />
                </div>
                <div className="padreInput textoInputs">
-                    <label className="blancoLetra">Nombre completo</label>
+                    <label className="labelLinkForm blancoLetra">Nombre completo</label>
                     <input
                     type="text"
                     className="inputTexto inputs"
@@ -85,7 +85,7 @@ import './LinkForm.css'
                     />
                </div>
                <div className=" padreInput textoInputs">
-                    <label className="blancoLetra">Sintomatología</label>
+                    <label className="labelLinkForm labelLinkForm blancoLetra">Sintomatología</label>
                     <input
                     type="text"
                     autocomplete="off"
@@ -97,7 +97,7 @@ import './LinkForm.css'
                     />
                </div>
                <div className="padreInput textoInputs">
-                    <label className="blancoLetra">Correo electrónico</label>
+                    <label className="labelLinkForm blancoLetra">Correo electrónico</label>
                     <input
                     type="mail"
                     className="inputTexto inputs"
@@ -109,7 +109,7 @@ import './LinkForm.css'
                     />
                </div>
                <div className=" padreInput textoInputs">
-                    <label className=" blancoLetra">Dosis</label>
+                    <label className="labelLinkForm blancoLetra">Dosis</label>
                     <select className="selector inputs" name="dosis" value={values.dosis} onChange={handleInputChange}>
                          <option value="" selected>Dosis</option>
                          <option value="Ninguna">Ninguna</option>
@@ -119,7 +119,7 @@ import './LinkForm.css'
                     </select>
                </div>
                <div className="padreInput textoInputs">
-                    <label className="blancoLetra">Telefono</label>
+                    <label className="labelLinkForm blancoLetra">Telefono</label>
                     <input
                     type="number"
                     className="inputTexto inputs"
@@ -131,7 +131,7 @@ import './LinkForm.css'
                     />
                </div>
                <div className="padreInput textoInputs">
-                    <label className="blancoLetra">Laboratorio</label>
+                    <label className="labelLinkForm blancoLetra">Laboratorio</label>
                     <select className="selector inputs" name="laboratorio" value={values.laboratorio} onChange={handleInputChange}>
                          <option value="" selected>Laboratorio</option>
                          <option value="N/A">No aplica</option>

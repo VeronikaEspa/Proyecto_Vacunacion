@@ -64,6 +64,7 @@ form h2{
     margin-top: 0;
 }
 .input-div.two{
+    margin-top: 5%;
     margin-bottom: 4px;
 }
 .i {
@@ -77,6 +78,7 @@ form h2{
 }
 .input-div > div{
     position: relative;
+    display: flex;
 }
 .input-div > div h5{
     position: absolute;
@@ -100,6 +102,15 @@ form h2{
     font-size: 1.2rem;
     color: #555;
     font-family: 'poppins', sans-serif;
+}
+.inputBienvenido{
+    border: 1px solid #CF703B;
+    border-radius: 5px;
+    padding: 0%;
+}
+.labelLogin{
+    width: 50%;
+    margin-right: 2%;
 }
 .a{
     display: block;
@@ -131,6 +142,12 @@ form h2{
 }
 .btn:hover{
     background-position: right;
+}
+.botonesdelLoginCrearYIniciar{
+    cursor: pointer;
+}
+.botonesdelLoginCrearYIniciar:hover{
+    color: #CF703B;
 }
 @media screen and (max-width:1050px){
     .container{

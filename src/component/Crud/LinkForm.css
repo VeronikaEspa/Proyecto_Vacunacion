@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
 }
-label{
+.labelLinkForm{
     display: inline-block;
     width: 22%;
     text-align: center;

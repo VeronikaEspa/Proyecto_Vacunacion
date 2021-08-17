@@ -1,5 +1,5 @@
 import React from 'react';
-import enfermera from '../../utils/img/enfermera.PNG'
+import enfermera from '../../utils/img/enfermera.png'
 import Usuario from '../../utils/img/user.png'
 import pass from '../../utils/img/pass.png'
 import './login.styles.css'
@@ -33,8 +33,9 @@ const Login = (props) => {
                     <i className="fa fa-user"></i>
                 </div>
                 <div className="loginContainer">
-                        <label>Usuario: </label>
+                        <label className="labelLogin">Usuario: </label>
                         <input
+                        className="inputBienvenido"
                         type="text"
                         autoFocus required
                         value={email}
@@ -48,8 +49,9 @@ const Login = (props) => {
                 <div className="i">
                 </div>
                 <div>
-                        <label>Contraseña: </label>
+                        <label className="labelLogin">Contraseña: </label>
                         <input
+                        className="inputBienvenido"
                         type="password"
                         required
                         value={password}
@@ -64,14 +66,14 @@ const Login = (props) => {
                         <>
                         <button onClick={handleSignup} className="a">Crea una cuenta</button>
                         <p>Si no tienes una cuenta, contacta con el encargado.
-                            <span onClick={() => setHasAccount(!hasAccount)}>Iniciar sesión</span>
+                            <span className="botonesdelLoginCrearYIniciar" onClick={() => setHasAccount(!hasAccount)}><br/>Iniciar sesión</span>
                         </p>
                     </>
                     ) : (
                         <>
                             <button onClick={handleLogin} className="btn">Iniciar sesión</button>
-                            <p>No tienes una
-                                <span onClick={() => setHasAccount(!hasAccount)}> Cuenta?</span>
+                            <p>¿No tienes una
+                                <span className="botonesdelLoginCrearYIniciar" onClick={() => setHasAccount(!hasAccount)}><br/> Cuenta?</span>
                             </p>
                         </>
                     )}
