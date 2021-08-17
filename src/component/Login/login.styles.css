@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-gap: 17rem;
+    grid-gap: 14rem;
 }
 .img img{
     width: 500px;
@@ -149,4 +149,15 @@ form h2{
         width: 400px;
     }
 }
-
+@media screen and (max-width:900px){
+    .img{
+        display:none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .login_container{
+        justify-content: center;
+    }
+ 
+}
